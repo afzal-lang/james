@@ -7,8 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // MVC
 // ======================
 builder.Services.AddControllersWithViews();
-var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
+// ======================
+// DATABASE URL
+// ======================
+var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
 string connectionString;
 
@@ -23,7 +26,8 @@ if (!string.IsNullOrEmpty(databaseUrl))
         $"Database={uri.AbsolutePath.TrimStart('/')};" +
         $"Username={userInfo[0]};" +
         $"Password={userInfo[1]};" +
-        $"SSL Mode=Require;Trust Server Certificate=true;";
+        $"SSL Mode=Require;" +
+        $"Trust Server Certificate=true;";
 }
 else
 {
@@ -33,15 +37,10 @@ else
 // ======================
 // DATABASE
 // ======================
-
-
-
 builder.Services.AddDbContext<JamesthewContext>(options =>
     options.UseNpgsql(connectionString)
-           .UseSnakeCaseNamingConvention());
-
-
-
+           .UseSnakeCaseNamingConvention()
+);
 
 // ======================
 // HTTP CONTEXT
@@ -59,7 +58,7 @@ builder.Services.AddSession(options =>
 });
 
 // ======================
-// AUTHENTICATION (COOKIE)
+// AUTHENTICATION
 // ======================
 builder.Services.AddAuthentication("MyCookieAuth")
     .AddCookie("MyCookieAuth", options =>
@@ -75,7 +74,7 @@ builder.Services.AddAuthentication("MyCookieAuth")
 var app = builder.Build();
 
 // ======================
-// MIDDLEWARE PIPELINE
+// MIDDLEWARE
 // ======================
 if (!app.Environment.IsDevelopment())
 {
@@ -95,26 +94,25 @@ app.UseAuthorization();
 // ======================
 // ROUTES
 // ======================
-
-
-// DEFAULT ROUTE
 app.MapControllerRoute(
     name: "default",
-   pattern: "{controller=user}/{action=Index}/{id?}"
+    pattern: "{controller=user}/{action=Index}/{id?}"
 );
 
-// FEEDBACK ROUTE
 app.MapControllerRoute(
     name: "feedback",
-   pattern: "Feedback/{action=Create}/{id?}"
+    pattern: "Feedback/{action=Create}/{id?}"
 );
+
 app.MapControllerRoute(
     name: "contest",
     pattern: "Contest/{action=Index}/{id?}",
     defaults: new { controller = "Contest" }
 );
 
-
+// ======================
+// AUTO MIGRATION
+// ======================
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<JamesthewContext>();

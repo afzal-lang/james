@@ -41,9 +41,9 @@ namespace WebApplication1.Migrations
 
                     b.Property<DateTime?>("PostDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp")
                         .HasColumnName("post_date")
-                        .HasDefaultValueSql("(getdate())");
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<int?>("PostedBy")
                         .HasColumnType("integer")
@@ -263,7 +263,7 @@ namespace WebApplication1.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PaymentId"));
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("amount");
 
                     b.Property<DateTime?>("PaymentDate")
@@ -349,9 +349,9 @@ namespace WebApplication1.Migrations
 
                     b.Property<DateTime?>("UploadDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp")
                         .HasColumnName("upload_date")
-                        .HasDefaultValueSql("(getdate())");
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<int?>("UploadedBy")
                         .HasColumnType("integer")
@@ -404,9 +404,9 @@ namespace WebApplication1.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp")
                         .HasColumnName("created_at")
-                        .HasDefaultValueSql("(getdate())");
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<int>("RecipeId")
                         .HasColumnType("integer")
@@ -443,12 +443,12 @@ namespace WebApplication1.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp")
                         .HasColumnName("created_at")
-                        .HasDefaultValueSql("(getdate())");
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp")
                         .HasColumnName("end_date");
 
                     b.Property<string>("PaymentMethod")
@@ -470,7 +470,7 @@ namespace WebApplication1.Migrations
                         .HasColumnName("plan_type");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp")
                         .HasColumnName("start_date");
 
                     b.Property<string>("Status")
@@ -559,9 +559,9 @@ namespace WebApplication1.Migrations
 
                     b.Property<DateTime?>("RegistrationDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
+                        .HasColumnType("timestamp")
                         .HasColumnName("registration_date")
-                        .HasDefaultValueSql("(getdate())");
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("Role")
                         .HasMaxLength(20)

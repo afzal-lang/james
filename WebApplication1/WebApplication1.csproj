@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\admin\img\progress\" />
     <Folder Include="wwwroot\admin\vendors\datatable\images\" />
     <Folder Include="wwwroot\admin\vendors\owl_carousel\css\css\colors\" />

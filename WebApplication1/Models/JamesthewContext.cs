@@ -6,7 +6,9 @@ namespace WebApplication1.Models;
 
 public partial class JamesthewContext : DbContext
 {
-   
+    public JamesthewContext()
+    {
+    }
 
     public JamesthewContext(DbContextOptions<JamesthewContext> options)
         : base(options)
@@ -27,105 +29,155 @@ public partial class JamesthewContext : DbContext
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Subscription> Subscriptions { get; set; }
 
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //    => optionsBuilder.UseSqlServer("data source=.;initial catalog=jamesthew;user id=sa;password=aptech; TrustServerCertificate=True");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-        // Configure Tip-User relationship
+        // =========================
+        // TIP
+        // =========================
         modelBuilder.Entity<Tip>(entity =>
         {
             entity.HasKey(e => e.TipId);
-            entity.Property(e => e.Title).HasMaxLength(200);
 
-            // Configure the relationship between Tip and User
-            entity.HasOne(d => d.UploadedByNavigation)  // Tip has one User
-                  .WithMany(p => p.Tips)               // User has many Tips
-                  .HasForeignKey(d => d.UploadedBy)    // Foreign key in Tip table
-                  .HasConstraintName("FK_Tips_Users")  // Constraint name for the foreign key (optional)
-                  .OnDelete(DeleteBehavior.SetNull);   // Set NULL if user is deleted, optional behavior
+            entity.Property(e => e.Title)
+                  .HasMaxLength(200);
+
+            entity.HasOne(d => d.UploadedByNavigation)
+                  .WithMany(p => p.Tips)
+                  .HasForeignKey(d => d.UploadedBy)
+                  .HasConstraintName("FK_Tips_Users")
+                  .OnDelete(DeleteBehavior.SetNull);
         });
 
-        // Configure Recipe-User relationship
+        // =========================
+        // RECIPE
+        // =========================
         modelBuilder.Entity<Recipe>(entity =>
         {
             entity.HasKey(e => e.RecipeId);
-            entity.Property(e => e.Title).HasMaxLength(200);
-            entity.Property(e => e.UploadDate)
-                  .HasDefaultValueSql("(getdate())")
-                  .HasColumnType("datetime");
 
-            // Configure the relationship between Recipe and User
+            entity.Property(e => e.Title)
+                  .HasMaxLength(200);
+
+            entity.Property(e => e.UploadDate)
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                  .HasColumnType("timestamp");
+
             entity.HasOne(d => d.UploadedByNavigation)
                   .WithMany(p => p.Recipes)
                   .HasForeignKey(d => d.UploadedBy)
                   .HasConstraintName("FK_Recipes_ToTable");
         });
 
-        // Configure other entities and relationships...
-
+        // =========================
+        // ANNOUNCEMENT
+        // =========================
         modelBuilder.Entity<Announcement>(entity =>
         {
             entity.HasKey(e => e.AnnouncementId);
-            entity.Property(e => e.AnnouncementId).HasColumnName("AnnouncementID");
+
+            entity.Property(e => e.AnnouncementId)
+                  .HasColumnName("AnnouncementID");
+
             entity.Property(e => e.PostDate)
-                  .HasDefaultValueSql("(getdate())")
-                  .HasColumnType("datetime");
-            entity.Property(e => e.Title).HasMaxLength(200);
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                  .HasColumnType("timestamp");
+
+            entity.Property(e => e.Title)
+                  .HasMaxLength(200);
         });
 
+        // =========================
+        // CATEGORY
+        // =========================
         modelBuilder.Entity<Category>(entity =>
         {
             entity.HasKey(e => e.CategoryId);
-            entity.Property(e => e.Name).HasMaxLength(100);
+
+            entity.Property(e => e.Name)
+                  .HasMaxLength(100);
         });
 
+        // =========================
+        // CONTEST
+        // =========================
         modelBuilder.Entity<Contest>(entity =>
         {
             entity.HasKey(e => e.ContestId);
-            entity.Property(e => e.Title).HasMaxLength(200);
+
+            entity.Property(e => e.Title)
+                  .HasMaxLength(200);
         });
 
+        // =========================
+        // CONTEST SUBMISSION
+        // =========================
         modelBuilder.Entity<ContestSubmission>(entity =>
         {
             entity.HasKey(e => e.SubmissionId);
-            entity.Property(e => e.Title).HasMaxLength(200);
+
+            entity.Property(e => e.Title)
+                  .HasMaxLength(200);
         });
 
+        // =========================
+        // FAQ
+        // =========================
         modelBuilder.Entity<Faq>(entity =>
         {
             entity.HasKey(e => e.Faqid);
+
             entity.ToTable("FAQ");
-            entity.Property(e => e.Question).HasMaxLength(300);
+
+            entity.Property(e => e.Question)
+                  .HasMaxLength(300);
         });
 
+        // =========================
+        // FEEDBACK
+        // =========================
         modelBuilder.Entity<Feedback>(entity =>
         {
             entity.HasKey(e => e.FeedbackId);
+
             entity.ToTable("Feedback");
         });
 
+        // =========================
+        // PAYMENT
+        // =========================
         modelBuilder.Entity<Payment>(entity =>
         {
             entity.HasKey(e => e.PaymentId);
-            entity.Property(e => e.Amount).HasColumnType("decimal(10, 2)");
+
+            entity.Property(e => e.Amount)
+                  .HasColumnType("decimal(10,2)");
         });
 
+        // =========================
+        // ROLE
+        // =========================
         modelBuilder.Entity<Role>(entity =>
         {
             entity.HasKey(e => e.RoleId);
-            entity.Property(e => e.RoleName).HasMaxLength(50);
+
+            entity.Property(e => e.RoleName)
+                  .HasMaxLength(50);
         });
 
+        // =========================
+        // SAVED
+        // =========================
         modelBuilder.Entity<Saved>(entity =>
         {
             entity.ToTable("Saved");
+
             entity.HasKey(e => e.SavedId);
+
             entity.Property(e => e.CreatedAt)
-                  .HasDefaultValueSql("(getdate())")
-                  .HasColumnType("datetime");
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                  .HasColumnType("timestamp");
 
             entity.HasOne(d => d.User)
                   .WithMany()
@@ -138,33 +190,71 @@ public partial class JamesthewContext : DbContext
                   .HasConstraintName("FK_Saved_Recipe");
         });
 
+        // =========================
+        // USER
+        // =========================
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.UserID);
-            entity.HasIndex(e => e.Email).IsUnique();
-            entity.Property(e => e.Email).HasMaxLength(100);
-            entity.Property(e => e.Name).HasMaxLength(100);
-            entity.Property(e => e.Password).HasMaxLength(100);
+
+            entity.HasIndex(e => e.Email)
+                  .IsUnique();
+
+            entity.Property(e => e.Email)
+                  .HasMaxLength(100);
+
+            entity.Property(e => e.Name)
+                  .HasMaxLength(100);
+
+            entity.Property(e => e.Password)
+                  .HasMaxLength(100);
+
             entity.Property(e => e.RegistrationDate)
-                  .HasDefaultValueSql("(getdate())")
-                  .HasColumnType("datetime");
-            entity.Property(e => e.Role).HasMaxLength(20);
-            entity.Property(e => e.SubscriptionType).HasMaxLength(20);
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                  .HasColumnType("timestamp");
+
+            entity.Property(e => e.Role)
+                  .HasMaxLength(20);
+
+            entity.Property(e => e.SubscriptionType)
+                  .HasMaxLength(20);
         });
 
+        // =========================
+        // SUBSCRIPTION
+        // =========================
         modelBuilder.Entity<Subscription>(entity =>
         {
             entity.HasKey(e => e.SubscriptionId);
-            entity.Property(e => e.PlanType).HasMaxLength(20).IsRequired();
-            entity.Property(e => e.PaymentMethod).HasMaxLength(20).IsRequired();
-            entity.Property(e => e.PhoneNumber).HasMaxLength(15).IsRequired();
-            entity.Property(e => e.Status).HasMaxLength(20).HasDefaultValue("Pending");
-            entity.Property(e => e.Amount).HasColumnType("decimal(10,2)");
-            entity.Property(e => e.StartDate).HasColumnType("datetime2");
-            entity.Property(e => e.EndDate).HasColumnType("datetime2");
+
+            entity.Property(e => e.PlanType)
+                  .HasMaxLength(20)
+                  .IsRequired();
+
+            entity.Property(e => e.PaymentMethod)
+                  .HasMaxLength(20)
+                  .IsRequired();
+
+            entity.Property(e => e.PhoneNumber)
+                  .HasMaxLength(15)
+                  .IsRequired();
+
+            entity.Property(e => e.Status)
+                  .HasMaxLength(20)
+                  .HasDefaultValue("Pending");
+
+            entity.Property(e => e.Amount)
+                  .HasColumnType("decimal(10,2)");
+
+            entity.Property(e => e.StartDate)
+                  .HasColumnType("timestamp");
+
+            entity.Property(e => e.EndDate)
+                  .HasColumnType("timestamp");
+
             entity.Property(e => e.CreatedAt)
-                  .HasColumnType("datetime2")
-                  .HasDefaultValueSql("(getdate())");
+                  .HasColumnType("timestamp")
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
             entity.HasOne(s => s.User)
                   .WithMany()
