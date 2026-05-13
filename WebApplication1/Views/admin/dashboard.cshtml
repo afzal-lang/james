@@ -1,0 +1,85 @@
+﻿
+@model WebApplication1.Models.DashboardVM
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">📊 Dashboard</h2>
+
+    <!-- 🔹 STATS -->
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card text-center p-3 shadow">
+                <h5>Total Users</h5>
+                <h2>@Model.TotalUsers</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-center p-3 shadow">
+                <h5>Total Categories</h5>
+                <h2>@Model.TotalCategories</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-center p-3 shadow">
+                <h5>Total Recipes</h5>
+                <h2>@Model.TotalRecipes</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🔹 CATEGORY LIST -->
+    <h3 class="mt-5">📂 Categories</h3>
+
+    <div class="row mt-3">
+        @foreach (var item in Model.Categories)
+        {
+            <div class="col-md-3">
+                <div class="card mb-3 shadow">
+                    <img src="@item.image" class="card-img-top" style="height:150px; object-fit:cover;" />
+
+                    <div class="card-body text-center">
+                        <h5>@item.Name</h5>
+                        <p>ID: @item.CategoryId</p>
+
+                        <a asp-action="Updatecategory" asp-route-id="@item.CategoryId" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="DetailCategory" asp-route-id="@item.CategoryId" class="btn btn-sm btn-info">Details</a>
+                        <a asp-action="Deletecategory" asp-route-id="@item.CategoryId" class="btn btn-sm btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- 🔹 CHART -->
+    <h3 class="mt-5">📈 Overview</h3>
+    <canvas id="myChart" height="100"></canvas>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    var ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Users', 'Categories', 'Recipes'],
+            datasets: [{
+                label: 'Dashboard Data',
+                data: [@Model.TotalUsers, @Model.TotalCategories, @Model.TotalRecipes],
+                borderWidth: 1
+            }]
+        }
+    });
+</script>

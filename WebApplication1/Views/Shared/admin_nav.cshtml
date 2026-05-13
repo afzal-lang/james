@@ -1,0 +1,173 @@
+﻿@using Microsoft.AspNetCore.Builder
+
+@{
+    WebApplication1.Models.JamesthewContext db = new WebApplication1.Models.JamesthewContext();
+    
+}
+<!-- sidebar  -->
+<nav class="sidebar">
+    <div class="logo d-flex justify-content-between">
+        <a class="large_logo" href="index-2.html"><img src="img/logo.png" alt=""></a>
+        <a class="small_logo" href="index-2.html"><img src="img/mini_logo.png" alt=""></a>
+        <div class="sidebar_close_icon d-lg-none">
+            <i class="ti-close"></i>
+        </div>
+    </div>
+    <ul id="sidebar_menu">
+        <li>
+            <a href="index-2.html" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/dashboard.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Dashboard</span>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="index-2.html" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/dashboard.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Subscription</span>
+                </div>
+            </a>
+        </li>
+
+
+
+        <h4 class="menu-text"><span>Pages</span> <i class="fas fa-ellipsis-h"></i> </h4>
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/5.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Category </span>
+                </div>
+            </a>
+            <ul>
+
+                <li>
+                    <a href="/admin/Contest/Create">
+                        <i class="fa fa-plus-circle"></i> <span>Create Contest</span>
+                    </a>
+                </li>
+                <li><a href="/admin/Contest/Index">All Contests</a></li>
+                <li><a href="/admin/Contest/Create">Create</a></li>
+            </ul>
+            <li>
+                <a href="/Feedback/AdminFeedbacks">
+                    <i class="fas fa-comment-alt"></i> <span>Feedbacks</span>
+                </a>
+            </li>
+        </li>
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/16.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Recipe</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="/admin/Recipe/Create">Create</a></li>
+                <li><a href="/admin/Recipe/Index">Edit</a></li>
+                <li><a href="/admin/Recipe/Delete">Delete</a></li>
+                <li><a href="/admin/Recipe/Detail">Detail</a></li>
+            </ul>
+        </li>
+
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/16.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Tips</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="/admin/Tips/Create">Create</a></li>
+                <li><a href="/admin/Tips/Index">Edit</a></li>
+                <li><a href="/admin/Tips/Delete">Delete</a></li>
+                <li><a href="/admin/Tips/Index">Detail</a></li>
+            </ul>
+        </li>
+
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/16.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Contest</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="/admin/Contest/Create">Create</a></li>
+                <li><a href="/admin/Contest/Index">Edit</a></li>
+                <li><a href="/admin/Contest/Delete">Delete</a></li>
+                <li><a href="/admin/Contest/Index">Detail</a></li>
+            </ul>
+        </li>
+
+
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/16.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Announcement</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="/admin/Announcement/Create">Create</a></li>
+                <li><a href="/admin/Announcement/Index">Edit</a></li>
+                <li><a href="/admin/Announcement/Delete">Delete</a></li>
+                <li><a href="/admin/Announcement/Index">Detail</a></li>
+            </ul>
+        </li>
+
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/16.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Feedback</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="editor.html">Create </a></li>
+                <li><a href="mail_box.html">Edit </a></li>
+                <li><a href="chat.html">Delete </a></li>
+                <li><a href="chat.html">Detail </a></li>
+            </ul>
+        </li>
+
+
+
+        <li class="">
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <div class="nav_icon_small">
+                    <img src="img/menu-icon/14.svg" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Widgets</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="profilebox.html">Profile Box</a></li>
+            </ul>
+        </li>
+
+      
+    </ul>
+</nav>
+
+

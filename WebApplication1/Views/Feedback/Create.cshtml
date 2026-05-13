@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Feedback";
+    Layout = "~/Views/Shared/user_layout.cshtml";
+}
+
+<section style="padding: 80px 0; background: #f9f9f9; min-height: 80vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+
+                <div class="text-center mb-5">
+                    <span class="subheading">Share Your Experience</span>
+                    <h2 style="font-weight:800;">Send Feedback</h2>
+                    <p style="color:#777;">We value your opinion. Help us improve!</p>
+                </div>
+
+                @if (TempData["Success"] != null)
+                {
+                    <div style="background:#d4edda; color:#155724; padding:15px 20px;
+                        border-radius:10px; margin-bottom:20px; font-weight:600;">
+                        ✅ @TempData["Success"]
+                    </div>
+                }
+
+                <div style="background:#fff; border-radius:20px; padding:40px;
+                    box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+
+                    <form asp-action="Create" asp-controller="Feedback" method="post">
+
+                        <div style="margin-bottom:25px;">
+                            <label style="font-weight:700; font-size:16px;
+                                display:block; margin-bottom:12px;">
+                                Your Rating
+                            </label>
+                            <div style="display:flex; gap:10px;">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <label style="font-size:35px; cursor:pointer; color:#ddd;">
+                                        <input type="radio" name="rating" value="@i"
+                                               style="display:none;"
+                                               onchange="updateStars(@i)" />
+                                        <span id="star@(i)">★</span>
+                                    </label>
+                                }
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:25px;">
+                            <label style="font-weight:700; font-size:16px;
+                                display:block; margin-bottom:10px;">
+                                Your Message
+                            </label>
+                            <textarea name="message" rows="5" required
+                                      placeholder="Write your feedback here..."
+                                      style="width:100%; padding:15px; border-radius:12px;
+                            border:2px solid #eee; font-size:15px;
+                            resize:none; outline:none; font-family:inherit;"
+                                      onfocus="this.style.borderColor='#f4a522'"
+                                      onblur="this.style.borderColor='#eee'"></textarea>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <label style="font-weight:700; font-size:16px;
+                                display:block; margin-bottom:10px;">
+                                Your Name
+                            </label>
+                            <input type="text" name="name" required
+                                   placeholder="Enter your name..."
+                                   style="width:100%; padding:15px; border-radius:12px;
+                            border:2px solid #eee; font-size:15px;
+                            outline:none; font-family:inherit;"
+                                   onfocus="this.style.borderColor='#f4a522'"
+                                   onblur="this.style.borderColor='#eee'" />
+                        </div>
+
+                        <button type="submit"
+                                style="width:100%; background:#f4a522; color:#fff;
+                            border:none; padding:15px; border-radius:12px;
+                            font-size:16px; font-weight:700; cursor:pointer;">
+                            Submit Feedback ✉️
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function updateStars(rating) {
+        for (var i = 1; i <= 5; i++) {
+            var star = document.getElementById('star' + i);
+            star.style.color = i <= rating ? '#f4a522' : '#ddd';
+        }
+    }
+</script>

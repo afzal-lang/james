@@ -1,0 +1,158 @@
+﻿@model IEnumerable<WebApplication1.Models.Announcement>
+
+@{
+    ViewData["Title"] = "Announcements List";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<style>
+    /* Professional Dashboard Styling */
+    .main-content {
+        padding: 2rem;
+        background-color: #f4f7f6;
+        min-height: 100vh;
+    }
+
+    .glass-card {
+        background: #ffffff;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    .table-header-custom {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+    }
+
+    .pro-table thead th {
+        background: #f8f9fa;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: #4b5563;
+        border: none;
+        padding: 15px;
+    }
+
+    .pro-table tbody tr {
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+        .pro-table tbody tr:hover {
+            background-color: #f1f5f9;
+            transform: scale(1.002);
+        }
+
+    .action-btn {
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: 0.2s;
+        text-decoration: none !important;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .btn-edit-pro {
+        background: #ebf4ff;
+        color: #3182ce;
+    }
+
+        .btn-edit-pro:hover {
+            background: #3182ce;
+            color: white;
+        }
+
+    .btn-delete-pro {
+        background: #fff5f5;
+        color: #e53e3e;
+    }
+
+        .btn-delete-pro:hover {
+            background: #e53e3e;
+            color: white;
+        }
+
+    .badge-date {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    .title-text {
+        color: #1a202c;
+        font-weight: 700;
+    }
+</style>
+
+<div class="main-content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold" style="color: #2d3748;">📣 Announcements</h2>
+            <p class="text-muted mb-0">Manage and publish company-wide updates.</p>
+        </div>
+        <a asp-action="CreateAnnouncement" class="btn btn-primary px-4 py-2 shadow-sm" style="border-radius: 10px; background: #667eea; border: none;">
+            <i class="fas fa-plus me-2"></i> Create New
+        </a>
+    </div>
+
+    <div class="glass-card">
+        <div class="table-responsive">
+            <table class="table pro-table mb-0 align-middle">
+                <thead>
+                    <tr>
+                        <th class="ps-4">Title</th>
+                        <th>Description</th>
+                        <th>Contest</th>
+                        <th>Date Posted</th>
+                        <th class="text-center">Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <span class="title-text">@item.Title</span>
+                            </td>
+                            <td class="text-muted small" style="max-width: 300px;">
+                                @item.Description
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark border">@(item.Contest?.Title ?? "General")</span>
+                            </td>
+                            <td>
+                                <span class="badge-date">
+                                    <i class="far fa-calendar-alt me-1 text-primary"></i>
+                                    @item.PostDate?.ToString("dd MMM, yyyy")
+                                </span>
+                            </td>
+                            <td class="text-center">
+                                <a asp-action="EditAnnouncement" asp-route-id="@item.AnnouncementId" class="action-btn btn-edit-pro me-2">
+                                    <i class="fas fa-pen-nib me-1"></i> Edit
+                                </a>
+                                <a asp-action="DeleteAnnouncement" asp-route-id="@item.AnnouncementId"
+                                   class="action-btn btn-delete-pro"
+                                   onclick="return confirm('ARE YOU SURE?')">
+                                    <i class="fas fa-trash-alt me-1"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

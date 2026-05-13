@@ -1,0 +1,298 @@
+﻿@{
+    ViewData["Title"] = "Payment";
+    Layout = "user_Layout";
+    string plan = ViewBag.Plan;
+    decimal amount = ViewBag.Amount;
+}
+
+<style>
+    .pay-wrapper {
+        max-width: 520px;
+        margin: 50px auto;
+        padding: 0 16px 60px;
+    }
+
+    .pay-summary {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-radius: 14px;
+        padding: 20px 24px;
+        margin-bottom: 28px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .pay-summary .s-icon { font-size: 2rem; }
+
+    .pay-summary h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #1e40af;
+        margin-bottom: 2px;
+    }
+
+    .pay-summary p {
+        font-size: 13px;
+        color: #3b82f6;
+        margin: 0;
+    }
+
+    .pay-card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 32px 28px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    .pay-card h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 24px;
+    }
+
+    .method-group {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    .method-btn {
+        flex: 1;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 16px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: white;
+    }
+
+    .method-btn:hover {
+        border-color: #2563eb;
+        background: #eff6ff;
+    }
+
+    .method-btn.active {
+        border-color: #2563eb;
+        background: #eff6ff;
+    }
+
+    .method-btn input[type="radio"] {
+        display: none;
+    }
+
+    .method-logo {
+        font-size: 1.6rem;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .method-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: #0f172a;
+    }
+
+    .method-btn.active .method-name {
+        color: #2563eb;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 7px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 13px 16px;
+        border: 1.5px solid #d1d5db;
+        border-radius: 10px;
+        font-size: 15px;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    .form-group input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+
+    .pay-total {
+        background: #f8fafc;
+        border-radius: 10px;
+        padding: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        font-size: 15px;
+    }
+
+    .pay-total span { color: #64748b; }
+    .pay-total strong {
+        color: #0f172a;
+        font-size: 1.2rem;
+    }
+
+    .btn-pay {
+        width: 100%;
+        padding: 15px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .btn-pay:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+    }
+
+    .btn-pay:active {
+        transform: scale(0.98);
+    }
+
+    .btn-back {
+        display: block;
+        text-align: center;
+        margin-top: 14px;
+        font-size: 13px;
+        color: #64748b;
+        text-decoration: none;
+    }
+
+    .btn-back:hover {
+        color: #2563eb;
+    }
+
+    .secure-note {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: #94a3b8;
+        font-size: 12px;
+        margin-top: 16px;
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <text>
+        .error-msg {
+            background: #fef2f2;
+            border: 1px solid #fca5a5;
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #dc2626;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+        </text>
+    }
+</style>
+
+<div class="pay-wrapper">
+
+    <!-- Summary -->
+    <div class="pay-summary">
+        <div class="s-icon">@(plan == "Monthly" ? "📅" : "🗓️")</div>
+        <div>
+            <h3>@plan Plan — $@amount</h3>
+            <p>@(plan == "Monthly" ? "1 month access · Billed monthly" : "12 months access · Best value plan")</p>
+        </div>
+    </div>
+
+    <div class="pay-card">
+        <h2>💳 Payment Method</h2>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="error-msg">⚠️ @TempData["Error"]</div>
+        }
+
+        <form method="post" action="/Subscription/ProcessPayment" id="payForm">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="plan" value="@plan" />
+
+            <!-- Payment Methods -->
+            <div class="method-group">
+                <label class="method-btn active" id="ep-btn">
+                    <input type="radio" name="paymentMethod" value="EasyPaisa"
+                           checked onchange="selectMethod(this,'ep-btn','jc-btn')" />
+                    <span class="method-logo">🟢</span>
+                    <span class="method-name">EasyPaisa</span>
+                </label>
+
+                <label class="method-btn" id="jc-btn">
+                    <input type="radio" name="paymentMethod" value="JazzCash"
+                           onchange="selectMethod(this,'jc-btn','ep-btn')" />
+                    <span class="method-logo">🔴</span>
+                    <span class="method-name">JazzCash</span>
+                </label>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label>📱 Registered Mobile Number</label>
+                <input type="tel"
+                       name="phoneNumber"
+                       placeholder="e.g. 03001234567"
+                       maxlength="11"
+                       pattern="03[0-9]{9}"
+                       required />
+
+                <small style="color:#94a3b8;font-size:12px;margin-top:4px;display:block">
+                    Enter your EasyPaisa / JazzCash account number
+                </small>
+            </div>
+
+            <!-- Total -->
+            <div class="pay-total">
+                <span>Total Amount</span>
+                <strong>$@amount</strong>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="btn-pay" id="payBtn">
+                <span>🔒</span> Confirm & Pay $@amount
+            </button>
+        </form>
+
+        <a href="/Subscription/Plans" class="btn-back">← Back to Plans</a>
+
+        <div class="secure-note">
+            🔒 Secured · 256-bit encrypted · Your data is safe
+        </div>
+    </div>
+</div>
+
+<script>
+    function selectMethod(radio, activeId, inactiveId) {
+        document.getElementById(activeId).classList.add('active');
+        document.getElementById(inactiveId).classList.remove('active');
+    }
+
+    document.getElementById('payForm').addEventListener('submit', function () {
+        const btn = document.getElementById('payBtn');
+        btn.disabled = true;
+        btn.innerHTML = '⏳ Processing payment...';
+    });
+</script>

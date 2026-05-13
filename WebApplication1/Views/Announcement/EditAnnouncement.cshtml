@@ -1,0 +1,52 @@
+﻿@model WebApplication1.Models.Announcement
+
+@{
+    ViewData["Title"] = "EditAnnouncement";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>EditAnnouncement</h1>
+
+<h4>Announcement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditAnnouncement" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AnnouncementId" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContestId" class="control-label"></label>
+                <select asp-for="ContestId" class="form-control" asp-items="ViewBag.ContestId"></select>
+                <span asp-validation-for="ContestId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostedBy" class="control-label"></label>
+                <select asp-for="PostedBy" class="form-control" asp-items="ViewBag.PostedBy"></select>
+                <span asp-validation-for="PostedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostDate" class="control-label"></label>
+                <input asp-for="PostDate" class="form-control" />
+                <span asp-validation-for="PostDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,190 @@
+﻿@model IEnumerable<WebApplication1.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Recipes";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h1 class="page-title">Recipes</h1>
+
+<a href="/Recipe/Add">+ Add New Recipe</a>
+
+<style>
+    body {
+        font-family: 'DM Sans', sans-serif;
+        background: #f4f6fb;
+    }
+
+    .page-title {
+        text-align: center;
+        margin: 20px 0;
+        color: #1f2937;
+        font-weight: 600;
+    }
+
+    .create-btn {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 18px;
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+        .create-btn:hover {
+            background: linear-gradient(135deg, #4f46e5, #3730a3);
+        }
+
+    /* TABLE */
+    .table-container {
+        width: 95%;
+        margin: auto;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    thead {
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: white;
+    }
+
+    th {
+        padding: 14px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    td {
+        padding: 12px;
+        font-size: 14px;
+        color: #374151;
+        border-bottom: 1px solid #eee;
+    }
+
+    tr:hover {
+        background: #f9fafb;
+    }
+
+    /* IMAGE */
+    .recipe-img {
+        width: 60px;
+        height: 50px;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+    /* BADGES */
+    .badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .free {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .paid {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+
+    /* ACTION BUTTONS */
+    .actions a {
+        text-decoration: none;
+        padding: 6px 10px;
+        margin: 2px;
+        border-radius: 6px;
+        font-size: 12px;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .edit {
+        background: #3b82f6;
+    }
+
+    .details {
+        background: #10b981;
+    }
+
+    .delete {
+        background: #ef4444;
+    }
+
+    .actions a:hover {
+        opacity: 0.8;
+    }
+</style>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Ingredients</th>
+                <th>Instructions</th> <!-- 👈 add -->
+                <th>Category</th>
+                <th>Status</th>
+                <th>Cooking Time</th>
+                <th>Servings</th>
+                <th>Date</th>
+                <th>Image</th>
+                <th>User</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var statusClass = item.IsFree == true ? "badge free" : "badge paid";
+                var statusText = item.IsFree == true ? "Free" : "Paid";
+
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Ingredients</td>
+                    <td>@item.Instructions</td> <!-- 👈 add -->
+                    <td>@item.Category?.Name</td>
+
+                    <td>
+                        <span class="@statusClass">@statusText</span>
+                    </td>
+
+                    <td>@item.CookingTime</td>
+                    <td>@item.Servings</td>
+                    <td>@item.UploadDate</td>
+
+                    <td>
+                        <img src="~/images/@item.image" class="recipe-img" />
+                    </td>
+
+                    <td>@item.UploadedByNavigation?.UserID</td>
+
+                    <td class="actions">
+                        <a asp-action="Update" asp-route-id="@item.RecipeId" class="edit">Edit</a>
+                        <a asp-action="Detail" asp-route-id="@item.RecipeId" class="details">Details</a>
+                        <a href="/Recipe/Delete/@item.RecipeId" class="delete">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+                  
+                   
+    </table>
+</div>

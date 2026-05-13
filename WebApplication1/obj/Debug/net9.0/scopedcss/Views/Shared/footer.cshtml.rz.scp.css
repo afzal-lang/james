@@ -1,0 +1,82 @@
+
+/* General footer styling */
+.ftco-footer[b-r9wcepbuc6] {
+    padding: 60px 0;
+    background-color: #222222;
+    color: #fff;
+}
+
+.ftco-footer-widget[b-r9wcepbuc6] {
+    margin-bottom: 30px;
+}
+
+    .ftco-footer-widget h2[b-r9wcepbuc6] {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .ftco-footer-widget ul li[b-r9wcepbuc6] {
+        font-size: 16px;
+        color: #888;
+    }
+
+        .ftco-footer-widget ul li a[b-r9wcepbuc6] {
+            color: #fff;
+        }
+
+            .ftco-footer-widget ul li a:hover[b-r9wcepbuc6] {
+                color: #F96D00;
+            }
+
+.ftco-footer-social i[b-r9wcepbuc6] {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+    transition: color 0.3s;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #333;
+}
+
+    .ftco-footer-social i:hover[b-r9wcepbuc6] {
+        color: #F96D00;
+        background-color: #fff;
+    }
+
+.open-hours[b-r9wcepbuc6] {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .open-hours li[b-r9wcepbuc6] {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.ftco-footer-widget .thumb-menu[b-r9wcepbuc6] {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.subscribe-form input[type="email"][b-r9wcepbuc6] {
+    width: 100%;
+}
+
+.subscribe-form input[type="submit"][b-r9wcepbuc6] {
+    width: 100%;
+    background-color: #F96D00;
+    color: white;
+    font-size: 16px;
+}
+
+    .subscribe-form input[type="submit"]:hover[b-r9wcepbuc6] {
+        background-color: #F96D00;
+    }
+
+

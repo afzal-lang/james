@@ -1,0 +1,47 @@
+/* Navbar Styling */
+#ftco-navbar[b-s1n9yxeb48] {
+    background: #222 !important;
+    padding: 12px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+    #ftco-navbar .navbar-brand[b-s1n9yxeb48] {
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff !important;
+    }
+
+    #ftco-navbar .nav-link[b-s1n9yxeb48] {
+        color: #ddd !important;
+        font-size: 14px;
+        margin-right: 10px;
+        transition: 0.3s;
+    }
+
+        #ftco-navbar .nav-link:hover[b-s1n9yxeb48] {
+            color: #F96D00 !important;
+        }
+
+    #ftco-navbar .dropdown-menu[b-s1n9yxeb48] {
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    #ftco-navbar .dropdown-item[b-s1n9yxeb48] {
+        font-size: 14px;
+    }
+
+        #ftco-navbar .dropdown-item:hover[b-s1n9yxeb48] {
+            background: #f3f4f6;
+        }
+
+    /* Icons spacing */
+    #ftco-navbar i[b-s1n9yxeb48] {
+        margin-right: 5px;
+    }
+
+/* Mobile fix */
+.navbar-toggler[b-s1n9yxeb48] {
+    border: none;
+    color: white;
+}

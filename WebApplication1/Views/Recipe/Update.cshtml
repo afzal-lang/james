@@ -1,0 +1,121 @@
+﻿@model WebApplication1.Models.Recipe
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>Update</h1>
+
+<h4>Recipe</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Update" enctype="multipart/form-data">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RecipeId" />
+
+            <!-- Title -->
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+
+            <!-- Ingredients -->
+            <div class="form-group">
+                <label asp-for="Ingredients"></label>
+                <textarea asp-for="Ingredients" class="form-control"></textarea>
+            </div>
+
+            <!-- Instructions -->
+            <div class="form-group">
+                <label asp-for="Instructions"></label>
+                <textarea asp-for="Instructions" class="form-control"></textarea>
+            </div>
+
+            <!-- Category -->
+            <div class="form-group">
+                <label asp-for="CategoryId"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+
+            <!-- IsFree -->
+            <div class="form-group">
+                <label>Is Free</label><br />
+                <label>
+                    <input type="radio" asp-for="IsFree" value="true" /> Yes
+                </label>
+                <label>
+                    <input type="radio" asp-for="IsFree" value="false" /> No
+                </label>
+            </div>
+
+            <!-- Cooking Time -->
+            <div class="form-group">
+                <label asp-for="CookingTime"></label>
+                <input asp-for="CookingTime" class="form-control" />
+            </div>
+
+            <!-- Servings -->
+            <div class="form-group">
+                <label asp-for="Servings"></label>
+                <input asp-for="Servings" class="form-control" />
+            </div>
+
+            <!-- Tags -->
+            <div class="form-group">
+                <label asp-for="Tags"></label>
+                <input asp-for="Tags" class="form-control" />
+            </div>
+
+            <!-- Nutrition -->
+            <div class="form-group">
+                <label asp-for="Nutrition"></label>
+                <textarea asp-for="Nutrition" class="form-control"></textarea>
+            </div>
+
+            <!-- Uploaded By -->
+            <div class="form-group">
+                <label asp-for="UploadedBy"></label>
+                <select asp-for="UploadedBy" class="form-control" asp-items="ViewBag.UploadedBy"></select>
+            </div>
+
+            <!-- Upload Date -->
+            <div class="form-group">
+                <label asp-for="UploadDate"></label>
+                <input asp-for="UploadDate" class="form-control" />
+            </div>
+
+            <!-- Image Upload -->
+            <div class="form-group">
+                <label>Upload New Image</label>
+                <input type="file" name="file" class="form-control" />
+            </div>
+
+            <!-- Old Image Preview -->
+            <div class="form-group">
+                <label>Current Image</label><br />
+                <img src="~/images/@Model.image" width="120" />
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

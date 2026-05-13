@@ -1,0 +1,62 @@
+﻿@model List<WebApplication1.Models.Feedback>
+@{
+    ViewData["Title"] = "All Feedbacks";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<div class="container-fluid" style="padding:30px;">
+    <h2 style="font-weight:800; margin-bottom:30px;">
+        📬 Customer Feedbacks
+    </h2>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var f in Model)
+            {
+                <div class="col-md-6 mb-4">
+                    <div style="background:#fff; border-radius:16px; padding:25px;
+                        box-shadow:0 4px 20px rgba(0,0,0,0.07);
+                        border-left:4px solid #f4a522;">
+
+                        <!-- Stars -->
+                        <div style="color:#f4a522; font-size:22px; margin-bottom:8px;">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (i <= (f.Rating ?? 0))
+                                {
+                                    <span>★</span>
+                                }
+                                else
+                                {
+                                    <span style="color:#ddd;">★</span>
+                                }
+                            }
+                            <span style="color:#555; font-size:14px; margin-left:8px;">
+                                @f.Rating/5
+                            </span>
+                        </div>
+
+                        <!-- Message -->
+                        <p style="color:#444; font-size:15px; line-height:1.7;
+                            margin-bottom:15px; font-style:italic;">
+                            "@f.Message"
+                        </p>
+
+                        <!-- Date -->
+                        <p style="color:#999; font-size:13px; margin:0;">
+                            📅 @f.FeedbackDate?.ToString("dd MMM yyyy, hh:mm tt")
+                        </p>
+
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div style="text-align:center; padding:60px; color:#999;">
+            <p style="font-size:18px;">No feedbacks yet.</p>
+        </div>
+    }
+</div>

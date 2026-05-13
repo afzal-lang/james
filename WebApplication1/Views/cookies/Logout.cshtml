@@ -1,0 +1,16 @@
+﻿  @model WebApplication1.Models.User
+
+@{
+    ViewData["Title"] = "Logout";
+    Layout = null;
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+
+<h2>Are you sure you want to logout?</h2>
+<hr />
+
+<form asp-action="Logout" method="post">
+    <input type="submit" value="Yes, Logout" class="btn btn-danger" />
+    <a asp-action="Index" asp-controller="admin" class="btn btn-secondary">Cancel</a>
+</form>

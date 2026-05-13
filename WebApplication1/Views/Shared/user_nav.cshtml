@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar id="ftco-navbar">
+    <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="/user/Index">
+            <img src="~/image/logo.png" alt="Logo" style="width:40px; margin-right:10px;">
+
+            JAMES KITCHEN
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+
+            <!-- LEFT SIDE MENU -->
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" asp-controller="user" asp-action="Index">Home</a>
+                </li>
+
+                <!-- Recipes Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Recipes</a>
+                    <div class="dropdown-menu">
+
+                        <div class="dropdown-menu">
+                            @if (ViewBag.Categories != null)
+                            {
+                            foreach (var cat in ViewBag.Categories)
+                            {
+                          
+                            <a class="dropdown-item" asp-controller="user" asp-action="ByCategory" asp-route-id="@cat.CategoryId">
+                                @cat.Name
+                            </a>
+                            }
+                            }
+                            else
+                            {
+                            <span class="dropdown-item text-muted">No Categories Found</span>
+                            }
+                        </div>
+                </li>
+
+                <!-- Contest Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Contest</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-controller="user" asp-action="Announcements">Announcements</a>
+                        <a class="dropdown-item" asp-controller="user" asp-action="Tips">Cooking Tips</a>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="User" asp-action="Apply">Contests</a>
+                    @* Purane links ke niche ye add karein *@
+              
+                </li>
+
+</div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Feedback" asp-action="Create">Feedback</a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT SIDE MENU -->
+            <ul class="navbar-nav ml-auto">
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                <li class="nav-item">
+                    <a href="/Subscription/Plans" class="nav-link">
+                        <i class="fa fa-credit-card"></i> Subscription
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Saved/MySaved">
+                        <i class="fa fa-bookmark"></i> Saved
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/cookies/Logout">
+                        <i class="fa fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+                }
+                else
+                {
+                <li class="nav-item">
+                    <a class="nav-link" href="/cookies/Login">
+                        <i class="fa fa-sign-in-alt"></i> Login
+                    </a>
+                </li>
+                }
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

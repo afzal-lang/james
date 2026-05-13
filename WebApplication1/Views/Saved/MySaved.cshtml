@@ -1,0 +1,415 @@
+﻿@model IEnumerable<WebApplication1.Models.Recipe>
+@{
+    ViewData["Title"] = "My Saved Recipes";
+    Layout = "~/Views/Shared/user_layout.cshtml";
+}
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .saved-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .saved-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .saved-header-left h1 {
+        font-size: 28px;
+        font-weight: 800;
+        color: #1a1a1a;
+    }
+
+        .saved-header-left h1 span {
+            color: #e74c3c;
+        }
+
+    .saved-header-left p {
+        color: #999;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    .saved-count-badge {
+        background: #fff0f0;
+        color: #e74c3c;
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        border: 1.5px solid #ffd5d5;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: #bbb;
+    }
+
+        .empty-state i {
+            font-size: 60px;
+            color: #f0f0f0;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .empty-state h3 {
+            font-size: 20px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+            color: #ddd;
+            margin-bottom: 24px;
+        }
+
+    .browse-btn {
+        background: #e74c3c;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-block;
+        transition: background 0.2s;
+    }
+
+        .browse-btn:hover {
+            background: #c0392b;
+            color: white;
+        }
+
+    .saved-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    @@media (max-width: 900px) {
+        .saved-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @@media (max-width: 550px) {
+        .saved-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .saved-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        transition: transform 0.25s, box-shadow 0.25s;
+        position: relative;
+    }
+
+        .saved-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+        }
+
+    .saved-card-img {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+    }
+
+        .saved-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.35s;
+        }
+
+    .saved-card:hover .saved-card-img img {
+        transform: scale(1.06);
+    }
+
+    .img-category {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        background: #e74c3c;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .img-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+        .img-badge.free {
+            background: #EAF3DE;
+            color: #3B6D11;
+        }
+
+        .img-badge.paid {
+            background: #FAEEDA;
+            color: #854F0B;
+        }
+
+    .remove-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        transition: transform 0.2s;
+        z-index: 2;
+    }
+
+        .remove-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .remove-btn i {
+            color: #e74c3c;
+            font-size: 13px;
+        }
+
+    .saved-card-body {
+        padding: 16px 18px 18px;
+    }
+
+    .saved-card-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .saved-card-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 12px;
+        color: #aaa;
+    }
+
+        .saved-card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .saved-card-meta i {
+            color: #e74c3c;
+        }
+
+    .toast-notification {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #222;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        animation: slideIn 0.3s ease;
+        min-width: 250px;
+    }
+
+    .toast-msg {
+        flex: 1;
+    }
+
+    .toast-close {
+        cursor: pointer;
+        font-size: 16px;
+        background: none;
+        border: none;
+        color: white;
+        font-weight: bold;
+    }
+
+        .toast-close:hover {
+            color: #e74c3c;
+        }
+
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes slideOut {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    }
+</style>
+
+<div class="saved-page">
+
+    <div class="saved-header">
+        <div class="saved-header-left">
+            <h1>My <span>Saved</span> Recipes</h1>
+            <p>Your saved recipes are here.</p>
+        </div>
+        <div class="saved-count-badge">
+            <i class="fa-solid fa-bookmark"></i>
+            @Model.Count() Recipes
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="empty-state">
+            <i class="fa-regular fa-bookmark"></i>
+            <h3>Koi saved recipe nahi</h3>
+            <p>Recipes browse karo aur bookmark kar lo!</p>
+            <a href="/user/ShowRecipes" class="browse-btn">
+                <i class="fa-solid fa-utensils"></i> Browse Recipes
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="saved-grid" id="savedGrid">
+            @foreach (var item in Model)
+            {
+                string categoryName = item.Category != null ? item.Category.Name : "General";
+                string imgSrc = !string.IsNullOrEmpty(item.image) ? item.image : "/images/default.jpg";
+                string uploadTime = item.UploadDate.HasValue ? item.UploadDate.Value.ToString("hh:mm tt") : "N/A";
+                string badgeClass = item.IsFree == true ? "free" : "paid";
+                string badgeText = item.IsFree == true ? "Free" : "Paid";
+
+                <div class="saved-card" id="card-@item.RecipeId">
+                    <div class="saved-card-img">
+                        <img src="@imgSrc" alt="@item.Title" />
+                        <span class="img-badge @badgeClass">@badgeText</span>
+                        <span class="img-category">@categoryName</span>
+                        <button class="remove-btn" onclick="removeSaved(@item.RecipeId)" title="Remove from saved">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="saved-card-body">
+                        <div class="saved-card-title">@item.Title</div>
+                        <div class="saved-card-meta">
+                            <span><i class="fa-regular fa-clock"></i> @uploadTime</span>
+                            <span><i class="fa-solid fa-tag"></i> @categoryName</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<script>
+    function removeSaved(recipeId) {
+        fetch('/Saved/ToggleSaved?recipeId=' + recipeId)
+            .then(res => res.json())
+            .then(data => {
+                if (data.success && data.action === 'removed') {
+                    let card = document.getElementById('card-' + recipeId);
+                    if (card) {
+                        card.style.transition = 'all 0.3s ease';
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            card.remove();
+                            updateCount();
+                        }, 300);
+                    }
+                    showToast('Recipe removed from saved!');
+                }
+            });
+    }
+
+    function updateCount() {
+        let remaining = document.querySelectorAll('.saved-card').length;
+        let badge = document.querySelector('.saved-count-badge');
+        if (badge) badge.innerHTML = '<i class="fa-solid fa-bookmark"></i> ' + remaining + ' Recipes';
+
+        if (remaining === 0) {
+            document.getElementById('savedGrid').innerHTML = `
+                <div style="grid-column:1/-1; text-align:center; padding:80px 20px; color:#bbb;">
+                    <i class="fa-regular fa-bookmark" style="font-size:60px; color:#f0f0f0; display:block; margin-bottom:20px;"></i>
+                    <h3 style="color:#ccc; margin-bottom:10px;">Koi saved recipe nahi</h3>
+                    <a href="/user/ShowRecipes" style="background:#e74c3c; color:white; padding:12px 28px; border-radius:30px; text-decoration:none; font-weight:600;">Browse Recipes</a>
+                </div>`;
+        }
+    }
+
+    function showToast(message) {
+        let existing = document.getElementById('toastBox');
+        if (existing) existing.remove();
+        let toast = document.createElement('div');
+        toast.id = 'toastBox';
+        toast.className = 'toast-notification';
+        toast.innerHTML = `
+            <span class="toast-msg">🔖 ${message}</span>
+            <button class="toast-close" onclick="closeToast()">✕</button>`;
+        document.body.appendChild(toast);
+        setTimeout(() => closeToast(), 3000);
+    }
+
+    function closeToast() {
+        let toast = document.getElementById('toastBox');
+        if (toast) {
+            toast.style.animation = 'slideOut 0.3s ease forwards';
+            setTimeout(() => toast.remove(), 300);
+        }
+    }
+</script>

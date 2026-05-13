@@ -1,0 +1,1141 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebApplication1.4mgepvw0m0.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\css\\bootstrap1.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap1.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\css\\colors\\default.css",
+      "PackagePath": "staticwebassets\\admin\\css\\colors\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\css\\metisMenu.css",
+      "PackagePath": "staticwebassets\\admin\\css\\metisMenu.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\css\\style1.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style1.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\OBJECTS.png",
+      "PackagePath": "staticwebassets\\admin\\img\\OBJECTS.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\bak_hovers\\sad.png",
+      "PackagePath": "staticwebassets\\admin\\img\\bak_hovers\\sad.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\banner.png",
+      "PackagePath": "staticwebassets\\admin\\img\\banner.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\card\\card-2.png",
+      "PackagePath": "staticwebassets\\admin\\img\\card\\card-2.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\card\\card-5.png",
+      "PackagePath": "staticwebassets\\admin\\img\\card\\card-5.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\client_img.png",
+      "PackagePath": "staticwebassets\\admin\\img\\client_img.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\crome.png",
+      "PackagePath": "staticwebassets\\admin\\img\\crome.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\customers\\1.png",
+      "PackagePath": "staticwebassets\\admin\\img\\customers\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\dateBg.png",
+      "PackagePath": "staticwebassets\\admin\\img\\dateBg.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\default-skin\\default-skin.png",
+      "PackagePath": "staticwebassets\\admin\\img\\default-skin\\default-skin.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\icon\\bell.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\icon\\bell.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\icon\\msg.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\icon\\msg.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\logo.png",
+      "PackagePath": "staticwebassets\\admin\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\man.png",
+      "PackagePath": "staticwebassets\\admin\\img\\man.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\media.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\media.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\11.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\11.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\12.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\12.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\14.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\14.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\15.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\15.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\16.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\16.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\2.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\2.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\3.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\3.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\4.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\4.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\5.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\5.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\6.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\6.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\7.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\7.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\8.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\8.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\9.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\9.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\menu-icon\\dashboard.svg",
+      "PackagePath": "staticwebassets\\admin\\img\\menu-icon\\dashboard.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\messages\\1.png",
+      "PackagePath": "staticwebassets\\admin\\img\\messages\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\mini_logo.png",
+      "PackagePath": "staticwebassets\\admin\\img\\mini_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\pro_complete.png",
+      "PackagePath": "staticwebassets\\admin\\img\\pro_complete.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\products\\01.png",
+      "PackagePath": "staticwebassets\\admin\\img\\products\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\products\\02.png",
+      "PackagePath": "staticwebassets\\admin\\img\\products\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\products\\img-1.png",
+      "PackagePath": "staticwebassets\\admin\\img\\products\\img-1.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\products\\img-2.png",
+      "PackagePath": "staticwebassets\\admin\\img\\products\\img-2.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\products\\img-4.png",
+      "PackagePath": "staticwebassets\\admin\\img\\products\\img-4.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\products\\img-5.png",
+      "PackagePath": "staticwebassets\\admin\\img\\products\\img-5.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\profilebox\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profilebox\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\profilebox\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profilebox\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\profilebox\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profilebox\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\profilebox\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profilebox\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\profilebox\\8.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profilebox\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\profilebox\\9.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profilebox\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\safari.png",
+      "PackagePath": "staticwebassets\\admin\\img\\safari.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\staf\\1.png",
+      "PackagePath": "staticwebassets\\admin\\img\\staf\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\staf\\2.png",
+      "PackagePath": "staticwebassets\\admin\\img\\staf\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\staf\\3.png",
+      "PackagePath": "staticwebassets\\admin\\img\\staf\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\staf\\4.png",
+      "PackagePath": "staticwebassets\\admin\\img\\staf\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\staf\\5.png",
+      "PackagePath": "staticwebassets\\admin\\img\\staf\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\6.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\tilt\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\tilt\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\img\\weather_1.png",
+      "PackagePath": "staticwebassets\\admin\\img\\weather_1.png"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\bootstrap1.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\bootstrap1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\custom.js",
+      "PackagePath": "staticwebassets\\admin\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\dashboard_init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\dashboard_init.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\jquery1-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery1-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\metisMenu.js",
+      "PackagePath": "staticwebassets\\admin\\js\\metisMenu.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\js\\popper1.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\popper1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\amchart-init.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\amchart-init.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\amcharts.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\amcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\ammap.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\ammap.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\amstock.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\amstock.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\dataloader.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\dataloader.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\export.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\export.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\pie.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\pie.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\serial.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\serial.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\am_chart\\worldLow.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\am_chart\\worldLow.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\animation\\tilt\\tilt-custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\animation\\tilt\\tilt-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\animation\\tilt\\tilt.jquery.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\animation\\tilt\\tilt.jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\animation\\wow\\wow-init.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\animation\\wow\\wow-init.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\animation\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\animation\\wow\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\apex_chart\\apex-chart2.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\apex_chart\\apex-chart2.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\apex_chart\\apex_chart_list.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\apex_chart\\apex_chart_list.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\apex_chart\\apex_dashboard.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\apex_chart\\apex_dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\apex_chart\\apexchart_lists.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\apex_chart\\apexchart_lists.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\apex_chart\\apexcharts.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\apex_chart\\apexcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\calender_js\\activation.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\calender_js\\activation.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\calender_js\\core\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\calender_js\\core\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\calender_js\\daygrid\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\calender_js\\daygrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\calender_js\\interaction\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\calender_js\\interaction\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\calender_js\\list\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\calender_js\\list\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\calender_js\\timegrid\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\calender_js\\timegrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chart_am\\animated.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chart_am\\animated.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chart_am\\chart-custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chart_am\\chart-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chart_am\\charts.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chart_am\\charts.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chart_am\\core.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chart_am\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chart_am\\kelly.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chart_am\\kelly.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chartjs\\chartjs_init.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chartjs\\chartjs_init.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chartjs\\roundedBar.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chartjs\\roundedBar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\chartlist\\Chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chartlist\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\count_up\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\count_up\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\count_up\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\count_up\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\css\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\css\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\css\\responsive.dataTables.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\css\\responsive.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\buttons.flash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\dataTables.responsive.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\dataTables.responsive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\jszip.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\jszip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\pdfmake.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datatable\\js\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datatable\\js\\vfs_fonts.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datepicker\\date-picker.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datepicker\\date-picker.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datepicker\\datepicker.custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datepicker\\datepicker.custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datepicker\\datepicker.en.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datepicker\\datepicker.en.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\datepicker\\datepicker.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\datepicker\\datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\drag\\dragable_sortable.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\drag\\dragable_sortable.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\drag\\jquery.ui.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\drag\\jquery.ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\drag\\sortable-custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\drag\\sortable-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\echart\\echarts.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\echart\\echarts.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\font_awesome\\webfonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\gijgo\\gijgo.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\gijgo\\gijgo.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\jquery-sparkline\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\jquery-sparkline\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\jquery-sparkline\\spactkine_init.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\jquery-sparkline\\spactkine_init.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\mapJs\\custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\mapJs\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\mapJs\\mapsjs-core.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\mapJs\\mapsjs-core.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\mapJs\\mapsjs-mapevents.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\mapJs\\mapsjs-mapevents.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\mapJs\\mapsjs-ui.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\mapJs\\mapsjs-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\mapJs\\mapsjs_service.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\mapJs\\mapsjs_service.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\material_icon\\MaterialIcons-Regular.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\material_icon\\MaterialIcons-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\material_icon\\material-icons.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\material_icon\\material-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\material_icon\\material-icons.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\material_icon\\material-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\morris\\morris.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\morris\\morris.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\niceselect\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\niceselect\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\niceselect\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\niceselect\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\nvd3\\d3.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\nvd3\\d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\nvd3\\layers.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\nvd3\\layers.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\nvd3\\nv.d3.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\nvd3\\nv.d3.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\owl_carousel\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\owl_carousel\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\owl_carousel\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\owl_carousel\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\photoswip\\photoswipe-ui-default.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\photoswip\\photoswipe-ui-default.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\photoswip\\photoswipe.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\photoswip\\photoswipe.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\photoswip\\photoswipe.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\photoswip\\photoswipe.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\progressbar\\jquery.barfiller.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\progressbar\\jquery.barfiller.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\scroll\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\scroll\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\scroll\\scrollable-custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\scroll\\scrollable-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\scroll\\scrollable.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\scroll\\scrollable.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\scroll_reval\\modernizr.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\scroll_reval\\modernizr.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\scroll_reval\\reveal-custom.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\scroll_reval\\reveal-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\scroll_reval\\scrollreveal.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\scroll_reval\\scrollreveal.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\tagsinput\\tagsinput.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\tagsinput\\tagsinput.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\tagsinput\\tagsinput.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\tagsinput\\tagsinput.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\text_editor\\fonts\\summernote.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\text_editor\\fonts\\summernote.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\text_editor\\fonts\\summernote.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\text_editor\\fonts\\summernote.ttf"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\text_editor\\fonts\\summernote.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\text_editor\\fonts\\summernote.woff"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\text_editor\\summernote-bs4.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\text_editor\\summernote-bs4.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\text_editor\\summernote-bs4.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\text_editor\\summernote-bs4.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.svg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.ttf"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\themefy_icon\\fonts\\themify9f24.woff"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\themefy_icon\\fonts\\themifyd41d.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\themefy_icon\\fonts\\themifyd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\themefy_icon\\themify-icons.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\themefy_icon\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\vectormap-home\\vectormap-2.0.2.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\vectormap-home\\vectormap-2.0.2.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\vectormap-home\\vectormap-2.0.2.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\vectormap-home\\vectormap-2.0.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\vectormap-home\\vectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\vectormap-home\\vectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-2.0.2.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-2.0.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-asia-mill.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-asia-mill.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-au-mill.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-au-mill.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-chicago-mill-en.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-chicago-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-in-mill.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-in-mill.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-uk-mill-en.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-uk-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-us-aea-en.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-us-aea-en.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\admin\\vendors\\verctorMap\\map-vector.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\verctorMap\\map-vector.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\css\\auth.css",
+      "PackagePath": "staticwebassets\\css\\auth.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\image\\0f8cd3ec-03e0-4fca-a45b-9b04dd940537.jfif",
+      "PackagePath": "staticwebassets\\image\\0f8cd3ec-03e0-4fca-a45b-9b04dd940537.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\0f8cd3ec-03e0-4fca-a45b-9b04dd940537.jfif",
+      "PackagePath": "staticwebassets\\images\\0f8cd3ec-03e0-4fca-a45b-9b04dd940537.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\1a4186c9-7a81-4f39-9a53-66d60394a4c5.jpg",
+      "PackagePath": "staticwebassets\\images\\1a4186c9-7a81-4f39-9a53-66d60394a4c5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\1c4f71a2-785f-46ac-aa2d-33a782580001.jfif",
+      "PackagePath": "staticwebassets\\images\\1c4f71a2-785f-46ac-aa2d-33a782580001.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\47794480-da41-492d-83a1-1b522b973c0f.jpg",
+      "PackagePath": "staticwebassets\\images\\47794480-da41-492d-83a1-1b522b973c0f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\479efc27-ea0a-4dd9-8b01-1bfc4646c1db.jpg",
+      "PackagePath": "staticwebassets\\images\\479efc27-ea0a-4dd9-8b01-1bfc4646c1db.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\5b90d4a2-6957-478a-9a9a-999548d3108c.jpg",
+      "PackagePath": "staticwebassets\\images\\5b90d4a2-6957-478a-9a9a-999548d3108c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\5dec7b56-4028-4a69-9249-bbf28de98f5e.jfif",
+      "PackagePath": "staticwebassets\\images\\5dec7b56-4028-4a69-9249-bbf28de98f5e.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\60927c7d-8f8a-4203-86f8-62c6978a7609.jpg",
+      "PackagePath": "staticwebassets\\images\\60927c7d-8f8a-4203-86f8-62c6978a7609.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\656c9b7a-ca5f-4dc5-aaee-b6c499c5ca6e.jpg",
+      "PackagePath": "staticwebassets\\images\\656c9b7a-ca5f-4dc5-aaee-b6c499c5ca6e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\81184a22-5a19-4c2b-9ac4-c6ecc933716b.jfif",
+      "PackagePath": "staticwebassets\\images\\81184a22-5a19-4c2b-9ac4-c6ecc933716b.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\83dee6e1-33d5-4435-a5f4-11fa2049cb44.jfif",
+      "PackagePath": "staticwebassets\\images\\83dee6e1-33d5-4435-a5f4-11fa2049cb44.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\b21e5d8f-b3f5-4f58-bf76-8f65abfacd51.jfif",
+      "PackagePath": "staticwebassets\\images\\b21e5d8f-b3f5-4f58-bf76-8f65abfacd51.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\d808ba1f-c9a6-416c-8d24-e8bab0663cd2.jpg",
+      "PackagePath": "staticwebassets\\images\\d808ba1f-c9a6-416c-8d24-e8bab0663cd2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\e5a8bcac-c78e-44e2-b01c-acd2197244c6.jpg",
+      "PackagePath": "staticwebassets\\images\\e5a8bcac-c78e-44e2-b01c-acd2197244c6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\e5fa55f1-9a43-4ea9-b122-a79811485e56.jpg",
+      "PackagePath": "staticwebassets\\images\\e5fa55f1-9a43-4ea9-b122-a79811485e56.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\ec1e7be7-2cab-4051-adad-5ad002ad3e8f.jpg",
+      "PackagePath": "staticwebassets\\images\\ec1e7be7-2cab-4051-adad-5ad002ad3e8f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\f8c5df02-9684-4b3e-96f3-d94d8d4cda15.jpg",
+      "PackagePath": "staticwebassets\\images\\f8c5df02-9684-4b3e-96f3-d94d8d4cda15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\images (1).jfif",
+      "PackagePath": "staticwebassets\\images\\images (1).jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\images.jfif",
+      "PackagePath": "staticwebassets\\images\\images.jfif"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\images\\italian.jpg",
+      "PackagePath": "staticwebassets\\images\\italian.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Pictures\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.WebApplication1.props",
+      "PackagePath": "build\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication1.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.WebApplication1.props",
+      "PackagePath": "buildTransitive\\WebApplication1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplication1.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>Categories</h1>
+
+<p>
+    <a asp-action="createcategory" class="btn btn-primary">Create New</a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="border-radius:12px;">
+
+                <!-- Image -->
+                <img src="@item.image"
+                     class="card-img-top"
+                     style="height:180px; object-fit:cover;" />
+
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">@item.Name</h5>
+
+                    <p class="text-muted">ID: @item.CategoryId</p>
+
+                    <div class="d-flex justify-content-center gap-2">
+                        <a asp-action="Updatecategory" asp-route-id="@item.CategoryId" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="DetailCategory" asp-route-id="@item.CategoryId" class="btn btn-sm btn-info">Details</a>
+                        <a asp-action="Deletecategory" asp-route-id="@item.CategoryId" class="btn btn-sm btn-danger">Delete</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

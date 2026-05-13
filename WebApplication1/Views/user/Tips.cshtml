@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "~/Views/Shared/user_layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4"><i class="fa fa-lightbulb-o text-warning"></i> Cooking Tips</h1>
+        <p class="lead text-muted">Master your kitchen with these professional tips.</p>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-primary fw-bold">@item.Title</h5>
+                    <hr />
+
+                    @* --- Subscription Check Start --- *@
+                    @{
+                    // Hum check kar rahe hain ke kya user ne login kiya hai aur uski subscription hai
+                    var userRole = Context.Session.GetString("UserRole");
+                    }
+
+                    @if (item.IsFree == true || userRole == "Subscribed")
+                    {
+                    @* Agar tip free hai ya user ne paise diye huye hain *@
+                    <p class="card-text text-dark">@item.Description</p>
+
+                    @if(item.IsFree == true) {
+                    <div class="badge bg-success">Free Access</div>
+                    } else {
+                    <div class="badge bg-info text-white">Premium Content ⭐</div>
+                    }
+                    }
+                    else
+                    {
+                    @* Agar tip paid hai aur user guest hai ya subscribed nahi hai *@
+                    <p class="card-text text-muted italic">
+                        <i class="fa fa-lock"></i> PLEASE FIRST GET SUBSCRIBTION
+                    </p>
+                    <div class="badge bg-warning text-dark">Premium ✨</div>
+                    <div class="mt-3">
+                        <a href="/Subscription/Plans" class="btn btn-sm btn-danger w-100">Get Subscription</a>
+                    </div>
+                    }
+                    @* --- Subscription Check End --- *@
+                </div>
+                <div class="card-footer bg-transparent border-0 text-muted small">
+                    Uploaded on: @item.UploadDate.ToShortDateString()
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.2s;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+</style>

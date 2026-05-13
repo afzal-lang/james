@@ -1,0 +1,260 @@
+﻿@model IEnumerable<WebApplication1.Models.Recipe>
+@{
+    ViewData["Title"] = "ShowRecipes";
+    Layout = "~/Views/Shared/user_layout.cshtml";
+}
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+<style>
+    .page-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 20px 20px 20px;
+    }
+
+    .filter-wrap {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 30px auto;
+        justify-content: center;
+    }
+
+    .cat-btn {
+        padding: 10px 22px;
+        border: 1.5px solid #ccc;
+        border-radius: 25px;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+        .cat-btn.active {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+
+    .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .recipe-card {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        background: white;
+        transition: 0.2s;
+    }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+    .card-img-wrap {
+        position: relative;
+        height: 220px;
+    }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .rating-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: rgba(0,0,0,0.55);
+        color: #FFD700;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+
+    .card-actions {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .action-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+
+        /* Save button */
+        .action-btn.bookmark i {
+            color: #ccc;
+        }
+
+        .action-btn.bookmark.saved i {
+            color: #e74c3c;
+        }
+
+    .card-body {
+        padding: 14px;
+    }
+
+    .card-category {
+        color: #e74c3c;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .card-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .card-meta {
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        color: #777;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 10px;
+    }
+
+    .view-btn {
+        display: block;
+        margin-top: 12px;
+        padding: 9px;
+        background: #e74c3c;
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+        .view-btn:hover {
+            background: #c0392b;
+        }
+</style>
+
+<div class="page-wrap">
+
+    <!-- Filter -->
+    <div class="filter-wrap">
+        <button class="cat-btn active" onclick="filterCategory('all', this)">All Recipes</button>
+
+        @foreach (var cat in ViewBag.Categories)
+        {
+            <button class="cat-btn" onclick="filterCategory('@cat.Name', this)">
+                @cat.Name
+            </button>
+        }
+    </div>
+
+    <!-- Grid -->
+    <div class="recipe-grid">
+
+        @foreach (var item in Model)
+        {
+            var categoryName = item.Category != null ? item.Category.Name : "General";
+            var imgSrc = !string.IsNullOrEmpty(item.image) ? item.image : "/images/default.jpg";
+            var uploadTime = item.UploadDate.HasValue ? item.UploadDate.Value.ToString("hh:mm tt") : "N/A";
+
+            var savedIds = ViewBag.SavedIds as List<int>;
+            bool isSaved = savedIds != null && savedIds.Contains(item.RecipeId);
+
+            <div class="recipe-card" data-category="@categoryName">
+
+                <div class="card-img-wrap">
+                    <img src="@imgSrc" />
+
+                    <div class="rating-badge">
+                        <i class="fa-solid fa-star"></i> 4.8
+                    </div>
+
+                    <div class="card-actions">
+
+                        <!-- SAVE ONLY -->
+                        <button class="action-btn bookmark @(isSaved ? "saved" : "")"
+                                onclick="toggleSave(@item.RecipeId, this)">
+                            <i class="@(isSaved ? "fa-solid fa-bookmark" : "fa-regular fa-bookmark")"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="card-category">@categoryName</div>
+                    <div class="card-title">@item.Title</div>
+
+                    <div class="card-meta">
+                        <span><i class="fa-regular fa-clock"></i> @uploadTime</span>
+                        <span>@categoryName</span>
+                    </div>
+
+                    <a href="/User/DetailRecipes/@item.RecipeId" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>
+
+<script>
+    function filterCategory(categoryName, btn) {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        let cards = document.querySelectorAll('.recipe-card');
+
+        cards.forEach(card => {
+            card.style.display =
+                (categoryName === 'all' || card.dataset.category === categoryName)
+                ? 'block' : 'none';
+        });
+    }
+
+    function toggleSave(recipeId, btn) {
+        let isLoggedIn = '@ViewBag.IsLoggedIn' === 'True';
+
+        if (!isLoggedIn) {
+            window.location.href = '/cookies/Login';
+            return;
+        }
+
+        fetch('/Saved/ToggleSaved?recipeId=' + recipeId)
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    let icon = btn.querySelector('i');
+
+                    if (data.action === 'added') {
+                        btn.classList.add('saved');
+                        icon.className = 'fa-solid fa-bookmark';
+                    } else {
+                        btn.classList.remove('saved');
+                        icon.className = 'fa-regular fa-bookmark';
+                    }
+                }
+            });
+    }
+</script>
+

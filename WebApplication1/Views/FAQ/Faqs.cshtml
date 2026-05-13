@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplication1.Models.Faq>
+
+@{
+    ViewData["Title"] = "Faqs";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>Faqs</h1>
+
+<p>
+    <a asp-action="CreateFaq">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Question)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Answer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                <a asp-action="EditFaq" asp-route-id="@item.Faqid">Edit</a> |
+                <a asp-action="DeleteFaq" asp-route-id="@item.Faqid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,111 @@
+﻿@model WebApplication1.Models.ContestListViewModel
+@{
+    ViewData["Title"] = "Contest Management";
+    // Admin layout use kar rahe hain taake sidebar nazar aaye
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<div class="main_content_iner">
+    <div class="container-fluid p-0">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="white_card card_height_100 mb_30 shadow-sm">
+                    <div class="white_card_header">
+                        <div class="box_header m-0">
+                            <div class="main-title">
+                                <h3 class="m-0 text-primary">Active Contests</h3>
+                            </div>
+                            <a href="/admin/Contest/Create" class="btn btn-primary shadow">
+                                <i class="ti-plus"></i> Create New Contest
+                            </a>
+                        </div>
+                    </div>
+                    <div class="white_card_body">
+                        <div class="table-responsive">
+                            <table class="table table-hover lms_table_active">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Contest Title</th>
+                                        <th>Description</th>
+                                        <th>Duration</th>
+                                        <th>Status</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model?.Contests != null && Model.Contests.Any())
+                                    {
+                                        foreach (var item in Model.Contests)
+                                        {
+                                            <tr>
+                                                @* 1. Title *@
+                                                <td><span class="fw-bold text-dark">@(item.Title ?? "Untitled")</span></td>
+                                                
+                                                @* 2. Description (Truncated for clean look) *@
+                                                <td style="max-width: 200px;">
+                                                    <small class="text-muted d-block text-truncate" title="@item.Description">
+                                                        @(item.Description ?? "No description provided.")
+                                                    </small>
+                                                </td>
+
+                                                @* 3. Dates (Nullable fix) *@
+                                                <td>
+                                                    <small class="text-muted">
+                                                        @(item.StartDate?.ToString("dd MMM yyyy") ?? "N/A") -
+                                                        @(item.EndDate?.ToString("dd MMM yyyy") ?? "N/A")
+                                                    </small>
+                                                </td>
+
+                                                @* 4. Status Badge *@
+                                                <td>
+                                                    @if (item.StartDate.HasValue && item.EndDate.HasValue)
+                                                    {
+                                                        if (DateTime.Now >= item.StartDate && DateTime.Now <= item.EndDate)
+                                                        {
+                                                            <span class="badge bg-success">Live Now</span>
+                                                        }
+                                                        else if (DateTime.Now < item.StartDate)
+                                                        {
+                                                            <span class="badge bg-info">Upcoming</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="badge bg-danger">Expired</span>
+                                                        }
+                                                    }
+                                                </td>
+
+                                                @* 5. Action Buttons *@
+                                                <td class="text-center">
+                                                    <div class="btn-group">
+                                                        <a href="/admin/Contest/Edit/@item.ContestId" class="btn btn-sm btn-outline-info">
+                                                            <i class="ti-pencil"></i> Edit
+                                                        </a>
+                                                        <form asp-action="DeleteConfirmed" asp-controller="Contest" asp-route-id="@item.ContestId" method="post" onsubmit="return confirm('Bhai, pakka delete karna hai?');" style="display:inline;">
+                                                            @Html.AntiForgeryToken()
+                                                            <button type="submit" class="btn btn-sm btn-outline-danger ms-1">
+                                                                <i class="ti-trash"></i> Delete
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="5" class="text-center py-5 text-muted">
+                                                No contests found. Click "Create New" to add one!
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

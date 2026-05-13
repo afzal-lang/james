@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JAMES KITCHEN</title>
+    <link rel="icon" type="image/png" href="~/image/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Bootstrap 4 + jQuery + Popper (for proper navbar toggler and dropdowns) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Open Iconic for menu icon (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/animate.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/aos.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/flaticon.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/icomoon.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/feliciano/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- 🔽 Navbar Partial View -->
+    @await Html.PartialAsync("user_nav")
+
+    <!-- 🔽 Main Content -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- 🔽 Footer Partial View -->
+    @await Html.PartialAsync("footer")
+
+    <!-- 🔽 Scripts -->
+    @RenderSection("Scripts", required: false)
+
+
+
+    <!-- jQuery -->
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://preview.colorlib.com/theme/feliciano/js/bootstrap.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="https://preview.colorlib.com/theme/feliciano/js/owl.carousel.min.js"></script>
+
+    <!-- Main Theme JS -->
+    <script src="https://preview.colorlib.com/theme/feliciano/js/main.js"></script>
+
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/popper.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/bootstrap.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.easing.1.3.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.waypoints.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.stellar.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/owl.carousel.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/aos.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.animateNumber.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/bootstrap-datepicker.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/jquery.timepicker.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/scrollax.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/feliciano/js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

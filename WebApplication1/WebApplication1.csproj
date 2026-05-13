@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\admin\img\progress\" />
+    <Folder Include="wwwroot\admin\vendors\datatable\images\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\css\colors\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\img\icon\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\img\menu-icon\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\img\staf\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\js\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\chartjs\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\chartlist\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\count_up\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\datatable\css\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\datatable\js\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\datepicker\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\font_awesome\css\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\gijgo\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\material_icon\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\morris\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\niceselect\css\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\niceselect\js\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\owl_carousel\css\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\owl_carousel\js\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\progressbar\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\scroll\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\tagsinput\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\text_editor\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\themefy_icon\" />
+    <Folder Include="wwwroot\admin\vendors\owl_carousel\css\vendors\vectormap-home\" />
+    <Folder Include="wwwroot\admin\vendors\select2\css\" />
+    <Folder Include="wwwroot\admin\vendors\swiper_slider\css\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+</Project>

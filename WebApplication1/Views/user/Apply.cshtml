@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebApplication1.Models.Contest>
+
+<div class="container mt-5">
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-header bg-primary text-white text-center py-3">
+                            <h4 class="mb-0">@item.Title</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">@item.Description</p>
+                            <hr />
+                            <p class="small text-secondary">
+                                <i class="fa fa-calendar"></i> Starts: @(item.StartDate.HasValue ? item.StartDate.Value.ToShortDateString() : "TBA")
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4">
+                            <button type="button" class="btn btn-primary w-100 apply-btn" onclick="showThankYou()">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center">
+                <div class="alert alert-info">Abhi koi active contest nahi hai. Admin se add karein!</div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function showThankYou() {
+    Swal.fire({
+    title: 'Thank You!',
+    text: 'YOUR FILE IS SUMBITTED. Good Luck!',
+    icon: 'success',
+    confirmButtonColor: '#c5a985',
+    confirmButtonText: 'OK'
+    });
+    }
+</script>

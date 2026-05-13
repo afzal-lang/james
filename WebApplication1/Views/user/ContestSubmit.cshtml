@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/user_layout.cshtml";
+    ViewData["Title"] = "Submit Entry";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white text-center py-3">
+                    <h4><i class="fa fa-trophy"></i> Submit Entry — @ViewBag.Contest.Title</h4>
+                </div>
+                <div class="card-body p-4">
+                    
+                    <form asp-action="ContestSubmit" asp-controller="user" asp-route-id="@ViewBag.Contest.ContestId" method="post">
+
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@ViewBag.Contest.ContestId" />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Entry Title</label>
+                            <input name="title" class="form-control" placeholder="Enter your entry title" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Type</label>
+                            <input name="type" class="form-control" placeholder="e.g. Recipe, Photo, Video" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Description</label>
+                            <textarea name="description" class="form-control" rows="4" placeholder="Describe your entry..." required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fa fa-paper-plane"></i> Submit Entry
+                            </button>
+                        </div>
+
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Thank You Popup -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+            <div class="mb-3">
+                <i class="fa fa-check-circle text-success" style="font-size:60px;"></i>
+            </div>
+            <h2 class="text-success">Thank You!</h2>
+            <p class="mt-2">Your submission has been received successfully!</p>
+            <a href="/user/ShowContests" class="btn btn-primary mt-3">Back to Contests</a>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Submitted == true)
+{
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            modal.show();
+        });
+    </script>
+}

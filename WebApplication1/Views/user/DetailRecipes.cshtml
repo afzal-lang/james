@@ -1,0 +1,322 @@
+﻿@model WebApplication1.Models.Recipe
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/user_layout.cshtml";
+}
+
+<style>
+    /* Override layout center */
+    .ftco-section, .container, p, h1, h2, h3, h4, h5,
+    .card-section, .ingredient-item, .section-title,
+    .recipe-title, .category-badge, .free-badge, .premium-badge {
+        text-align: left !important;
+    }
+
+    .recipe-hero-img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    }
+
+    .category-badge {
+        background: #f4a522;
+        color: #fff;
+        padding: 5px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .recipe-title {
+        font-size: 36px;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f9f9f9;
+        padding: 12px 20px;
+        border-radius: 12px;
+        min-width: 90px;
+        text-align: center !important;
+    }
+
+    .meta-label {
+        font-size: 11px;
+        color: #999;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center !important;
+    }
+
+    .meta-value {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-top: 4px;
+        text-align: center !important;
+    }
+
+    .section-title {
+        font-size: 22px;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #f4a522;
+        display: inline-block;
+    }
+
+    .ingredient-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 15px;
+        color: #444;
+    }
+
+    .ingredient-dot {
+        width: 10px;
+        height: 10px;
+        background: #f4a522;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .nutri-card {
+        background: linear-gradient(135deg, #1a1a1a, #333);
+        border-radius: 20px;
+        padding: 30px;
+        color: #fff;
+    }
+
+    .free-badge {
+        background: #28a745;
+        color: #fff;
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .premium-badge {
+        background: #e74c3c;
+        color: #fff;
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .card-section {
+        background: #fff;
+        border-radius: 20px;
+        padding: 35px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+</style>
+
+<div style="background:#f9f9f9; min-height:100vh; padding-bottom:60px;">
+    <div class="container" style="max-width:960px;">
+
+        <!-- HERO SECTION -->
+        <div style="padding:40px 0 30px 0;">
+            <div class="row">
+                <!-- Left: Image -->
+                <div class="col-md-5">
+                    @if (!string.IsNullOrEmpty(Model.image))
+                    {
+                        <img src="@Model.image"
+                             alt="@Model.Title"
+                             class="recipe-hero-img" />
+                    }
+                    else
+                    {
+                        <div style="width:100%; height:400px; background:#e0e0e0;
+                            border-radius:16px; display:flex; align-items:center;
+                            justify-content:center;">
+                            <span style="color:#999; font-size:16px;">No Image</span>
+                        </div>
+                    }
+                </div>
+
+                <!-- Right: Info -->
+                <div class="col-md-7" style="padding-left:35px; padding-top:10px;">
+                    <span class="category-badge">
+                        @(Model.Category?.Name ?? "General")
+                    </span>
+
+                    <h1 class="recipe-title">@Model.Title</h1>
+
+                    @if (Model.IsFree == true)
+                    {
+                        <span class="free-badge">✓ Free Recipe</span>
+                    }
+                    else
+                    {
+                        <span class="premium-badge">⭐ Premium Recipe</span>
+                    }
+
+                    <!-- Meta -->
+                    <div style="display:flex; gap:15px; margin-top:20px; flex-wrap:wrap; justify-content:flex-start;">
+                        <div class="meta-item">
+                            <span class="meta-label">⏱ Cook Time</span>
+                            <span class="meta-value">@Model.CookingTime</span>
+                            <span style="font-size:11px; color:#999;">mins</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">🍽 Servings</span>
+                            <span class="meta-value" id="servingCount">@Model.Servings</span>
+                            <span style="font-size:11px; color:#999;">persons</span>
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.Tags))
+                        {
+                            <div class="meta-item">
+                                <span class="meta-label">🏷 Tags</span>
+                                <span class="meta-value" style="font-size:13px;">@Model.Tags</span>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Servings Control -->
+                    <div style="display:flex; align-items:center; gap:12px; margin-top:20px; justify-content:flex-start;">
+                        <span style="font-weight:600; color:#555; font-size:14px;">Servings:</span>
+                        <button onclick="changeServings(-1)"
+                                style="background:#f4a522; color:#fff; border:none;
+                            width:32px; height:32px; border-radius:50%;
+                            font-size:20px; cursor:pointer; font-weight:700;
+                            line-height:1; display:flex; align-items:center;
+                            justify-content:center;">
+                            −
+                        </button>
+                        <span id="servingDisplay"
+                              style="font-weight:700; font-size:20px; min-width:30px;">
+                            @Model.Servings
+                        </span>
+                        <button onclick="changeServings(1)"
+                                style="background:#f4a522; color:#fff; border:none;
+                            width:32px; height:32px; border-radius:50%;
+                            font-size:20px; cursor:pointer; font-weight:700;
+                            line-height:1; display:flex; align-items:center;
+                            justify-content:center;">
+                            +
+                        </button>
+                    </div>
+
+                    <!-- Description -->
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <p style="color:#666; font-size:15px; line-height:1.8; margin-top:20px;">
+                            @Model.Description
+                        </p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- INGREDIENTS -->
+        <div class="card-section">
+            <h3 class="section-title">🥗 Ingredients</h3>
+            @if (!string.IsNullOrEmpty(Model.Ingredients))
+            {
+                var ingredients = Model.Ingredients.Split(',');
+                foreach (var ing in ingredients)
+                {
+                    if (!string.IsNullOrWhiteSpace(ing))
+                    {
+                        <div class="ingredient-item">
+                            <div class="ingredient-dot"></div>
+                            <span>@ing.Trim()</span>
+                        </div>
+                    }
+                }
+            }
+            else
+            {
+                <p style="color:#999;">No ingredients listed.</p>
+            }
+        </div>
+
+        <!-- INSTRUCTIONS -->
+        <div class="card-section">
+            <h3 class="section-title">👨‍🍳 Instructions</h3>
+            @if (!string.IsNullOrEmpty(Model.Instructions))
+            {
+                <p style="font-size:15px; color:#555; line-height:2.0; white-space:pre-line;">
+                    @Model.Instructions
+                </p>
+            }
+            else
+            {
+                <p style="color:#999;">No instructions listed.</p>
+            }
+        </div>
+
+        <!-- NUTRITION -->
+        @if (!string.IsNullOrEmpty(Model.Nutrition))
+        {
+            <div class="card-section">
+                <h3 class="section-title">📊 Nutrition Facts</h3>
+                <div class="nutri-card">
+                    <p style="color:#fff; font-size:15px; line-height:1.8;">
+                        @Model.Nutrition
+                    </p>
+                </div>
+            </div>
+        }
+
+        <!-- TAGS -->
+        @if (!string.IsNullOrEmpty(Model.Tags))
+        {
+            <div class="card-section">
+                <h3 class="section-title">🏷 Tags</h3>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    @foreach (var tag in Model.Tags.Split(','))
+                    {
+                        <span style="background:#f0f0f0; color:#555; padding:6px 14px;
+                            border-radius:20px; font-size:13px; font-weight:600;">
+                            @tag.Trim()
+                        </span>
+                    }
+                </div>
+            </div>
+        }
+
+        <!-- BACK BUTTON -->
+        <div style="text-align:center; margin-top:10px;">
+            <a href="@Url.Action("ShowRecipes", "user")"
+                   style="background:#1a1a1a; color:#fff; padding:14px 40px;
+                border-radius:12px; text-decoration:none; font-weight:700;
+                font-size:15px; display:inline-block;">
+                ← Back to Recipes
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var currentServings = @Model.Servings;
+
+    function changeServings(change) {
+        currentServings += change;
+        if (currentServings < 1) currentServings = 1;
+        document.getElementById('servingDisplay').innerText = currentServings;
+        document.getElementById('servingCount').innerText = currentServings;
+    }
+</script>

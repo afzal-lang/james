@@ -1,0 +1,169 @@
+﻿@model WebApplication1.Models.Recipe
+
+@{
+    ViewData["Title"] = "Recipe Detail";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<style>
+    .recipe-container {
+        width: 90%;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .top-section {
+        display: flex;
+        gap: 30px;
+    }
+
+    .recipe-img {
+        width: 300px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #1f2937;
+    }
+
+    .meta {
+        margin-top: 10px;
+        color: gray;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .free {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .paid {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+
+    .section {
+        margin-top: 30px;
+    }
+
+        .section h3 {
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+    .box {
+        background: #f9fafb;
+        padding: 15px;
+        border-radius: 10px;
+        line-height: 1.6;
+    }
+
+    .info-grid {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .info-box {
+        background: #eef2ff;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+</style>
+
+<div class="recipe-container">
+
+    <!-- TOP -->
+    <div class="top-section">
+
+        <img src="~/images/@Model.image" class="recipe-img" />
+
+        <div>
+            <div class="title">@Model.Title</div>
+
+            <div class="meta">
+                Category: @Model.Category?.Name
+                @{
+                    var statusClass = Model.IsFree == true ? "badge free" : "badge paid";
+                    var statusText = Model.IsFree == true ? "Free" : "Paid";
+                }
+                <span class="@statusClass">@statusText</span>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-box">⏱ @Model.CookingTime mins</div>
+                <div class="info-box">🍽 @Model.Servings servings</div>
+                <div class="info-box">📅 @Model.UploadDate</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="section">
+        <h3>Description</h3>
+        <div class="box">
+            @Model.Description
+        </div>
+    </div>
+
+    <!-- INGREDIENTS -->
+    <div class="section">
+        <h3>Ingredients</h3>
+        <div class="box">
+            @Model.Ingredients
+        </div>
+    </div>
+
+    <!-- INSTRUCTIONS (NO IMAGES) -->
+    <div class="section">
+        <h3>Instructions</h3>
+        <div class="box">
+            @Model.Instructions
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div class="section">
+        <h3>Tags</h3>
+        <div class="box">
+            @Model.Tags
+        </div>
+    </div>
+
+    <!-- NUTRITION -->
+    <div class="section">
+        <h3>Nutrition</h3>
+        <div class="box">
+            @Model.Nutrition
+        </div>
+    </div>
+
+    <!-- USER -->
+    <div class="section">
+        <h3>Uploaded By</h3>
+        <div class="box">
+            @Model.UploadedByNavigation?.UserID
+        </div>
+    </div>
+
+    <br />
+
+    <a asp-action="Update" asp-route-id="@Model.RecipeId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+
+</div>

@@ -1,0 +1,114 @@
+﻿@* using System.Net;
+using System.Net.Mail;
+
+namespace WebApplication1.Services
+{
+    public class EmailService
+    {
+        private readonly IConfiguration _config;
+
+        public EmailService(IConfiguration config)
+        {
+            _config = config;
+        }
+
+        public async Task SendSubscriptionConfirmationAsync(
+            string toEmail,
+            string userName,
+            string planType,
+            decimal amount,
+            DateTime endDate)
+        {
+            var smtpHost    = _config["Email:SmtpHost"];
+            var smtpPort    = int.Parse(_config["Email:SmtpPort"]);
+            var senderEmail = _config["Email:SenderEmail"];
+            var senderPass  = _config["Email:SenderPassword"];
+            var senderName  = _config["Email:SenderName"];
+
+            string planLabel  = planType == "Monthly" ? "Monthly ($10/month)" : "Yearly ($100/year)";
+            string endDateStr = endDate.ToString("dd MMMM yyyy");
+            string amountStr  = amount.ToString("0.00");
+
+            // string.Format use kiya - {0}=userName {1}=planLabel {2}=amountStr {3}=endDateStr
+            string body = string.Format(GetEmailTemplate(), userName, planLabel, amountStr, endDateStr);
+
+            using var client = new SmtpClient(smtpHost, smtpPort)
+            {
+                Credentials    = new NetworkCredential(senderEmail, senderPass),
+                EnableSsl      = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network
+            };
+
+            var mail = new MailMessage
+            {
+                From       = new MailAddress(senderEmail, senderName),
+                Subject    = "Subscription Confirmed - JamesThew",
+                Body       = body,
+                IsBodyHtml = true
+            };
+
+            mail.To.Add(toEmail);
+            await client.SendMailAsync(mail);
+        }
+
+        private static string GetEmailTemplate()
+        {
+            return
+
+@"<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  body {{ font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }}
+  .container {{ max-width: 580px; margin: 40px auto; background: #ffffff; border-radius: 12px; overflow: hidden; }}
+  .header {{ background: #2563eb; padding: 40px 32px; text-align: center; }}
+  .header h1 {{ color: #ffffff; margin: 0; font-size: 24px; }}
+  .header p  {{ color: #bfdbfe; margin: 8px 0 0; font-size: 14px; }}
+  .content {{ padding: 32px; }}
+  .greeting {{ font-size: 18px; font-weight: bold; color: #0f172a; margin-bottom: 12px; }}
+  .message  {{ color: #475569; font-size: 15px; line-height: 1.7; margin-bottom: 12px; }}
+  .plan-box {{ background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }}
+  .plan-box p {{ margin: 8px 0; color: #1e40af; font-size: 14px; }}
+  .plan-name  {{ font-size: 17px; font-weight: bold; color: #1d4ed8; }}
+  .check {{ color: #16a34a; font-weight: bold; margin-right: 6px; }}
+  .footer {{ background: #f8fafc; padding: 18px 32px; text-align: center; border-top: 1px solid #e2e8f0; }}
+  .footer p {{ color: #94a3b8; font-size: 12px; margin: 0; }}
+</style>
+</head>
+<body>
+<div class='container'>
+  <div class='header'>
+    <h1>Subscription Confirmed!</h1>
+    <p>Thank you for joining JamesThew Premium</p>
+  </div>
+  <div class='content'>
+    <p class='greeting'>Assalam o Alaikum, {0}!</p>
+    <p class='message'>
+      Aapki subscription successfully activate ho gayi hai.
+      Hum khush hain ke aap hamare premium member ban gaye hain!
+    </p>
+    <div class='plan-box'>
+      <p class='plan-name'>{1}</p>
+      <p><span class='check'>&#10003;</span> Amount Paid: <strong>${2}</strong></p>
+      <p><span class='check'>&#10003;</span> Status: <strong>Active</strong></p>
+      <p><span class='check'>&#10003;</span> Valid Until: <strong>{3}</strong></p>
+    </div>
+    <p class='message'>
+      Ab aap hamare tamam premium features enjoy kar sakte hain.
+      Agar koi masla ho to hamare support team se rabta karein.
+    </p>
+    <p class='message'>
+      Shukriya!<br>
+      <strong>Team JamesThew</strong>
+    </p>
+  </div>
+  <div class='footer'>
+    <p>Yeh ek automated email hai. Please reply mat karein.</p>
+  </div>
+</div>
+</body>
+</html>";
+        }
+    }
+} *@

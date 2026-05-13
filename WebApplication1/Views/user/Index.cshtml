@@ -1,0 +1,407 @@
+﻿@model List<WebApplication1.Models.Recipe>
+    @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/user_layout.cshtml";
+    }
+
+    <section class="home-slider owl-carousel js-fullheight">
+        <div class="slider-item js-fullheight" style="background-image: url(https://preview.colorlib.com/theme/feliciano/images/bg_1.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text js-fullheight justify-content-center align-items-center">
+                    <div class="col-md-12 text-center">
+                        <span class="subheading">Jemes Kitchen</span>
+                        <h1 class="mb-4">Best Restaurant</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item js-fullheight" style="background-image: url(https://preview.colorlib.com/theme/feliciano/images/bg_2.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text js-fullheight justify-content-center align-items-center">
+                    <div class="col-md-12 text-center">
+                        <span class="subheading">Jemes Kitchen</span>
+                        <h1 class="mb-4">Nutritious & Tasty</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-about" style="background-image: url('images/about_img.jpg');"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="heading-section">
+                        <span class="subheading">Our Story</span>
+                        <h2 class="mb-4">About Us</h2>
+
+                        <p style="font-size: 18px; line-height: 1.8; color: #555; text-align: justify;">
+                            Welcome to <strong>James Kitchen</strong>, where culinary tradition meets modern innovation.
+                            Our journey began with a simple mission: to bring people together through the love of
+                            authentic, handcrafted meals. Every dish we serve is prepared with the finest
+                            locally-sourced ingredients and a passion for perfection.
+                        </p>
+
+                        <p style="font-size: 18px; line-height: 1.8; color: #555; text-align: justify;">
+                            Whether you are looking for a cozy family dinner or exploring new flavors,
+                            we provide a dining experience that is both sophisticated and heart-warming.
+                            Taste the difference that quality and dedication make.
+                        </p>
+
+                        <!-- Learn More Button -->
+                        <p>
+                            <button onclick="toggleAbout()" class="btn btn-black py-3 px-4" id="learnMoreBtn">
+                                Learn More
+                            </button>
+                        </p>
+
+                        <!-- Hidden extra paragraphs -->
+                        <div id="extraAbout" style="display:none; margin-top:15px;">
+                            <p style="font-size: 18px; line-height: 1.8; color: #555; text-align: justify;">
+                                At James Kitchen, we believe that every meal tells a story.
+                                Our chefs craft each dish with decades of culinary expertise,
+                                blending traditional recipes with a modern twist that keeps
+                                our guests coming back for more. From farm-fresh vegetables
+                                to hand-selected spices, quality is never compromised.
+                            </p>
+                            <p style="font-size: 18px; line-height: 1.8; color: #555; text-align: justify;">
+                                We are more than just a restaurant — we are a community.
+                                Through our cooking contests, shared recipes, and culinary
+                                tips, we invite food lovers from all walks of life to join
+                                our growing family. Because at James Kitchen, the table is
+                                always set for you.
+                            </p>
+                            <text>
+
+                            </text>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>'<!-- ========== RECIPES SECTION ========== -->
+    <section class="ftco-section" style="background-color: #f9f9f9; padding: 60px 0;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 text-center heading-section">
+                    <span class="subheading">Delicious Dishes</span>
+                    <h2 class="mb-4">Our Recipes</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                @if (Model != null && Model.Any())
+                {
+                foreach (var recipe in Model)
+                {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm" style="border-radius:12px; overflow:hidden; border:none;">
+                        @if (!string.IsNullOrEmpty(recipe.image))
+                        {
+                        <img src="@recipe.image" alt="@recipe.Title"
+                             style="height:220px; object-fit:cover; width:100%;" />
+                        }
+                        else
+                        {
+                        <div style="height:220px; background:#e0e0e0; display:flex; align-items:center; justify-content:center;">
+                            <span style="color:#999; font-size:14px;">No Image</span>
+                        </div>
+                        }
+                        <div class="card-body" style="padding:20px;">
+                            <span style="background:#f4a522; color:#fff; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:600;">
+                                @(recipe.Category != null ? recipe.Category.Name : "General")
+                            </span>
+                            <h5 class="mt-2 mb-1" style="font-weight:700; font-size:18px;">@recipe.Title</h5>
+                            <p style="color:#777; font-size:14px; line-height:1.6;">
+                                @(recipe.Description != null && recipe.Description.Length > 80 ? recipe.Description.Substring(0, 80) + "..." : recipe.Description)
+                            </p>
+                            <div style="display:flex; gap:15px; font-size:13px; color:#555; margin-bottom:12px;">
+                                <span>@recipe.CookingTime mins</span>
+                                <span>@recipe.Servings servings</span>
+                                @if (recipe.IsFree == true)
+                                {
+                                <span style="color:green; font-weight:600;">Free</span>
+                                }
+                                else
+                                {
+                                <span style="color:#e74c3c; font-weight:600;">Premium</span>
+                                }
+                            </div>
+                            <a href="@Url.Action("DetailRecipes", "user" , new { id=recipe.RecipeId })"
+                               class="btn btn-black py-2 px-4"
+                               style="border-radius:8px; font-weight:600; width:100%; text-align:center; display:block;">
+                                View Recipe
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                }
+                }
+                else
+                {
+                <div class="col-12 text-center">
+                    <p style="color:#999; font-size:18px;">No recipes available yet.</p>
+                </div>
+                }
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="@Url.Action("ShowRecipes", "user" )"
+                       class="btn btn-black py-3 px-5"
+                       style="border-radius:8px; font-size:16px; font-weight:600;">
+                        View All Recipes
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ========== CATEGORIES SECTION ========== -->
+    <section class="ftco-section" style="padding: 60px 0; background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 text-center heading-section">
+                    <span class="subheading">Browse By</span>
+                    <h2 class="mb-4">Categories</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                @if (ViewBag.Categories != null)
+                {
+                foreach (var cat in ViewBag.Categories)
+                {
+                <div class="col-md-2 col-6 mb-4 text-center">
+                    <a href="@Url.Action("ByCategory", "user" , new { id=cat.CategoryId })"
+                       style="text-decoration:none;">
+                        <div style="background:#f9f9f9; border-radius:50%; width:90px; height:90px;
+                                    display:flex; align-items:center; justify-content:center;
+                                    margin:0 auto 10px; font-size:32px; box-shadow:0 4px 15px rgba(0,0,0,0.08);
+                                    transition:all 0.3s;">
+                            🍽
+                        </div>
+                        <p style="font-weight:600; color:#333; font-size:14px;">@cat.Name</p>
+                    </a>
+                </div>
+                }
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="ftco-section" style="padding:60px 0; background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 text-center heading-section">
+                    <span class="subheading">Our Promise</span>
+                    <h2 class="mb-4">Why Choose Us</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div style="background:#fff; border-radius:16px; padding:30px 20px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="font-size:40px; margin-bottom:15px;">🥗</div>
+                        <h5 style="font-weight:700; margin-bottom:10px;">Fresh Ingredients</h5>
+                        <p style="color:#777; font-size:14px; line-height:1.7;">
+                            Every recipe uses locally sourced, farm-fresh ingredients for the best taste.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div style="background:#fff; border-radius:16px; padding:30px 20px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="font-size:40px; margin-bottom:15px;">👨‍🍳</div>
+                        <h5 style="font-weight:700; margin-bottom:10px;">Expert Chefs</h5>
+                        <p style="color:#777; font-size:14px; line-height:1.7;">
+                            Our recipes are crafted and verified by professional chefs with years of experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div style="background:#fff; border-radius:16px; padding:30px 20px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="font-size:40px; margin-bottom:15px;">⏱️</div>
+                        <h5 style="font-weight:700; margin-bottom:10px;">Quick & Easy</h5>
+                        <p style="color:#777; font-size:14px; line-height:1.7;">
+                            Step-by-step instructions make cooking simple and enjoyable for everyone.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 text-center">
+                    <div style="background:#fff; border-radius:16px; padding:30px 20px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="font-size:40px; margin-bottom:15px;">🏆</div>
+                        <h5 style="font-weight:700; margin-bottom:10px;">Award Winning</h5>
+                        <p style="color:#777; font-size:14px; line-height:1.7;">
+                            Join our cooking contests and showcase your talent to win exciting prizes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LATEST TIPS ========== -->
+    <section class="ftco-section" style="padding:60px 0; background:#fff;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 text-center heading-section">
+                    <span class="subheading">Pro Advice</span>
+                    <h2 class="mb-4">Cooking Tips</h2>
+                </div>
+            </div>
+            <div class="row">
+                @if (ViewBag.Tips != null)
+                {
+                foreach (var tip in ViewBag.Tips)
+                {
+                <div class="col-md-4 mb-4">
+                    <div style="background:#f9f9f9; border-radius:16px; padding:25px;
+                                box-shadow:0 4px 15px rgba(0,0,0,0.06); height:100%;
+                                border-left:4px solid #f4a522;">
+                        <div style="font-size:28px; margin-bottom:12px;">💡</div>
+                        <h5 style="font-weight:700; margin-bottom:10px; font-size:17px;">
+                            @tip.Title
+                        </h5>
+                        <p style="color:#777; font-size:14px; line-height:1.7;">
+                            @(tip.Description != null && tip.Description.Length > 100
+                            ? tip.Description.Substring(0, 100) + "..."
+                            : tip.Description)
+                        </p>
+                    </div>
+                </div>
+                }
+                }
+                else
+                {
+                <div class="col-12 text-center">
+                    <p style="color:#999;">No tips available yet.</p>
+                </div>
+                }
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <a href="@Url.Action("Tips", "user" )"
+                       class="btn btn-black py-3 px-5"
+                       style="border-radius:8px; font-size:16px; font-weight:600;">
+                        View All Tips
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTEST BANNER ========== -->
+    <section style="background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+                padding:70px 0; margin:0;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 text-white">
+                    <span style="background:#f4a522; color:#fff; padding:5px 15px;
+                             border-radius:20px; font-size:13px; font-weight:600;
+                             margin-bottom:15px; display:inline-block;">
+                        🏆 Live Now
+                    </span>
+                    <h2 style="font-weight:800; font-size:36px; margin-bottom:15px; color:#fff;">
+                        Join Our Cooking Contest!
+                    </h2>
+                    <p style="color:#ccc; font-size:16px; line-height:1.8; margin-bottom:0;">
+                        Show off your culinary skills and compete with the best home chefs.
+                        Win exciting prizes and get featured on James Kitchen!
+                    </p>
+                </div>
+                <div class="col-md-4 text-center mt-4 mt-md-0">
+                    <a href="@Url.Action("ShowContests", "user" )"
+                       class="btn py-3 px-5"
+                       style="background:#f4a522; color:#fff; border-radius:8px;
+                          font-size:16px; font-weight:700; border:none;
+                          box-shadow:0 4px 20px rgba(244,165,34,0.4);">
+                        Enter Contest →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="ftco-section" style="padding:60px 0; background:#f9f9f9;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 text-center heading-section">
+                    <span class="subheading">What People Say</span>
+                    <h2 class="mb-4">Testimonials</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div style="background:#fff; border-radius:16px; padding:30px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="color:#f4a522; font-size:20px; margin-bottom:10px;">★★★★★</div>
+                        <p style="color:#555; font-size:15px; line-height:1.8; font-style:italic;">
+                            "James Kitchen has completely transformed the way I cook at home.
+                            The recipes are easy to follow and absolutely delicious!"
+                        </p>
+                        <div style="display:flex; align-items:center; margin-top:20px;">
+                            <div style="width:45px; height:45px; border-radius:50%;
+                                    background:#f4a522; display:flex; align-items:center;
+                                    justify-content:center; color:#fff; font-weight:700;
+                                    font-size:18px; margin-right:12px;">S</div>
+                            <div>
+                                <p style="margin:0; font-weight:700; font-size:15px;">Sara Ahmed</p>
+                                <p style="margin:0; color:#999; font-size:13px;">Home Chef</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div style="background:#fff; border-radius:16px; padding:30px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="color:#f4a522; font-size:20px; margin-bottom:10px;">★★★★★</div>
+                        <p style="color:#555; font-size:15px; line-height:1.8; font-style:italic;">
+                            "The cooking tips section is a goldmine! I have learned so many
+                            new techniques that have leveled up my cooking game."
+                        </p>
+                        <div style="display:flex; align-items:center; margin-top:20px;">
+                            <div style="width:45px; height:45px; border-radius:50%;
+                                    background:#f4a522; display:flex; align-items:center;
+                                    justify-content:center; color:#fff; font-weight:700;
+                                    font-size:18px; margin-right:12px;">A</div>
+                            <div>
+                                <p style="margin:0; font-weight:700; font-size:15px;">Ali Hassan</p>
+                                <p style="margin:0; color:#999; font-size:13px;">Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div style="background:#fff; border-radius:16px; padding:30px;
+                            box-shadow:0 4px 20px rgba(0,0,0,0.07); height:100%;">
+                        <div style="color:#f4a522; font-size:20px; margin-bottom:10px;">★★★★★</div>
+                        <p style="color:#555; font-size:15px; line-height:1.8; font-style:italic;">
+                            "I participated in the cooking contest and had an amazing experience.
+                            The community here is so supportive and inspiring!"
+                        </p>
+                        <div style="display:flex; align-items:center; margin-top:20px;">
+                            <div style="width:45px; height:45px; border-radius:50%;
+                                    background:#f4a522; display:flex; align-items:center;
+                                    justify-content:center; color:#fff; font-weight:700;
+                                    font-size:18px; margin-right:12px;">F</div>
+                            <div>
+                                <p style="margin:0; font-weight:700; font-size:15px;">Fatima Khan</p>
+                                <p style="margin:0; color:#999; font-size:13px;">Contest Winner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/js/toggleAbout.js"></script>

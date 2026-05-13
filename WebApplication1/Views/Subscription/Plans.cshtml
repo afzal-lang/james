@@ -1,0 +1,237 @@
+﻿@{
+    ViewData["Title"] = "Subscription Plans";
+    Layout = "user_Layout";
+}
+
+<style>
+    .sub-hero {
+        text-align: center;
+        padding: 50px 20px 30px;
+    }
+
+        .sub-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .sub-hero p {
+            color: #64748b;
+            font-size: 1.05rem;
+            margin-top: 8px;
+        }
+
+    .plans-grid {
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+        padding: 20px 20px 60px;
+        max-width: 860px;
+        margin: 0 auto;
+    }
+
+    .plan-card {
+        background: #ffffff;
+        border: 2px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 36px 32px;
+        width: 340px;
+        transition: all 0.25s ease;
+        position: relative;
+    }
+
+        .plan-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 12px 40px rgba(37,99,235,0.12);
+            transform: translateY(-4px);
+        }
+
+        .plan-card.popular {
+            border-color: #2563eb;
+            box-shadow: 0 8px 30px rgba(37,99,235,0.15);
+        }
+
+    .badge-popular {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #2563eb;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 18px;
+        border-radius: 50px;
+        white-space: nowrap;
+    }
+
+    .plan-icon {
+        font-size: 2.4rem;
+        margin-bottom: 14px;
+    }
+
+    .plan-name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 6px;
+    }
+
+    .plan-price {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #2563eb;
+        line-height: 1;
+        margin: 12px 0 4px;
+    }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+    .plan-saving {
+        font-size: 13px;
+        color: #16a34a;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 28px;
+    }
+
+        .plan-features li {
+            font-size: 14px;
+            color: #475569;
+            padding: 7px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .plan-features li:last-child {
+                border-bottom: none;
+            }
+
+            .plan-features li::before {
+                content: "✓";
+                color: #16a34a;
+                font-weight: 700;
+                font-size: 15px;
+                flex-shrink: 0;
+            }
+
+    .btn-subscribe {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+        .btn-subscribe:hover {
+            background: #1d4ed8;
+            color: white;
+        }
+
+        .btn-subscribe.outline {
+            background: transparent;
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+            .btn-subscribe.outline:hover {
+                background: #eff6ff;
+            }
+
+    /* Active subscription notice */
+    .active-notice {
+        max-width: 580px;
+        margin: 0 auto 30px;
+        background: #dcfce7;
+        border: 1px solid #86efac;
+        border-radius: 12px;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #166534;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+        .active-notice .icon {
+            font-size: 1.4rem;
+        }
+</style>
+
+<div class="sub-hero">
+    <h1>Choose Your Plan</h1>
+    <p>Unlock Premium features  – cancel anytime</p>
+</div>
+
+@if (ViewBag.ActiveSub != null)
+{
+    var sub = (WebApplication1.Models.Subscription)ViewBag.ActiveSub;
+    <div class="active-notice" style="max-width:580px;margin:0 auto 30px;">
+        <span class="icon">✅</span>
+        <div>
+            Your <strong>@sub.PlanType plan</strong> is already active — valid until <strong>@sub.EndDate.ToString("dd MMM yyyy")</strong>. If you purchase a new plan, the current one will be replaced.
+        </div>
+    </div>
+}
+
+<div class="plans-grid">
+
+    <!-- Monthly -->
+    <div class="plan-card">
+        <div class="plan-icon">📅</div>
+        <div class="plan-name">Monthly Plan</div>
+        <div class="plan-price">$10 <span>/ month</span></div>
+        <div class="plan-saving">&nbsp;</div>
+        <ul class="plan-features">
+            <li>All Premium Features</li>
+            <li>Unlimited Recipes</li>
+            <li>Priority Support</li>
+            <li>New Content Weekly</li>
+            <li>Cancel Anytime</li>
+        </ul>
+        <a href="/Subscription/Payment?plan=Monthly" class="btn-subscribe outline">
+            Select Monthly →
+        </a>
+    </div>
+
+    <!-- Yearly -->
+    <div class="plan-card popular">
+        <div class="badge-popular">⭐ Best Value</div>
+        <div class="plan-icon">🗓️</div>
+        <div class="plan-name">Yearly Plan</div>
+        <div class="plan-price">$100 <span>/ year</span></div>
+        <div class="plan-saving">💚 Save $20 compared to monthly!</div>
+        <ul class="plan-features">
+            <li>All Premium Features</li>
+            <li>Unlimited Recipes</li>
+            <li>Priority Support</li>
+            <li>New Content Weekly</li>
+            <li>2 Months FREE</li>
+        </ul>
+        <a href="/Subscription/Payment?plan=Yearly" class="btn-subscribe">
+            Select Yearly →
+        </a>
+    </div>
+
+</div>

@@ -1,0 +1,427 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+
+/* ============================================
+   RECIPE INDEX PAGE — recipe-index.css
+   Layout file ke <head> mein add karein:
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="~/css/recipe-index.css" />
+   ============================================ */
+
+:root {
+    --green: #2D4A3E;
+    --green-light: #3D6B5A;
+    --green-pale: #EBF2EF;
+    --orange: #C8733A;
+    --orange-pale: #FDF6F0;
+    --orange-mid: #F5E6D8;
+    --bg: #F7F5F2;
+    --surface: #FFFFFF;
+    --surface-2: #F2EFEB;
+    --text: #1A1A18;
+    --text-muted: #6B6860;
+    --text-faint: #A8A49E;
+    --border: #E2DDD8;
+    --border-dark: #C8C4BE;
+    --free-bg: #EBF5F0;
+    --free-text: #1E6645;
+    --paid-bg: #F5E6D8;
+    --paid-text: #7A3D18;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 100px;
+    --font-display: 'Lora', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --ease: 0.18s ease;
+}
+
+/* ---------- Page Wrapper ---------- */
+.recipe-page {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    padding: 28px 32px;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Page Header ---------- */
+.recipe-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+    .recipe-page-header h1 {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--text);
+        letter-spacing: -0.4px;
+        margin: 0;
+    }
+
+/* ---------- Create Button ---------- */
+.btn-create {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--green);
+    color: #ffffff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background var(--ease);
+}
+
+    .btn-create::before {
+        content: '+';
+        font-size: 17px;
+        line-height: 1;
+    }
+
+    .btn-create:hover {
+        background: var(--green-light);
+        color: #ffffff;
+    }
+
+/* ==========================================
+   CATEGORY FILTERS
+   ========================================== */
+.category-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.cat-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 7px 17px;
+    border-radius: var(--radius-xl);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all var(--ease);
+    white-space: nowrap;
+}
+
+    .cat-btn:hover {
+        border-color: var(--green);
+        color: var(--green);
+        background: var(--green-pale);
+    }
+
+    .cat-btn.active {
+        background: var(--green);
+        color: #ffffff;
+        border-color: var(--green);
+        font-weight: 500;
+    }
+
+/* ==========================================
+   RECIPE CARDS GRID
+   ========================================== */
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.recipe-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--ease), border-color var(--ease);
+    cursor: pointer;
+}
+
+    .recipe-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--border-dark);
+    }
+
+    .recipe-card img {
+        width: 100%;
+        height: 138px;
+        object-fit: cover;
+        display: block;
+        background: var(--surface-2);
+    }
+
+    /* card mein body wrapper agar add karna ho */
+    .recipe-card > h3,
+    .recipe-card > p,
+    .recipe-card > span {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .recipe-card h3 {
+        font-family: var(--font-display);
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.35;
+        color: var(--text);
+        margin: 13px 0 4px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .recipe-card p {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--green-light);
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin: 0 0 10px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .recipe-card span {
+        display: inline-block;
+        margin: 0 14px 14px;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 3px 10px;
+        border-radius: var(--radius-xl);
+    }
+
+/* ==========================================
+   BADGES
+   ========================================== */
+.badge-free {
+    background: var(--free-bg);
+    color: var(--free-text);
+}
+
+.badge-paid {
+    background: var(--paid-bg);
+    color: var(--paid-text);
+}
+
+/* ==========================================
+   LOGIN NOTICE
+   ========================================== */
+.login-notice {
+    background: var(--orange-pale);
+    border: 1px solid #EDD5BE;
+    border-left: 3px solid var(--orange);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #6B4A30;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .login-notice a {
+        color: var(--orange);
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+        .login-notice a:hover {
+            text-decoration: underline;
+        }
+
+/* ==========================================
+   SECTION DIVIDER (Cards aur Table ke beech)
+   ========================================== */
+.section-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 4px 0 22px;
+}
+
+    .section-divider .divider-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        white-space: nowrap;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+    }
+
+/* ==========================================
+   TABLE
+   ========================================== */
+.table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+    .table thead {
+        background: var(--bg);
+    }
+
+    .table th {
+        padding: 11px 15px;
+        text-align: left;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--text-faint);
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+    }
+
+    .table td {
+        padding: 11px 15px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text);
+        vertical-align: middle;
+    }
+
+    .table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    .table tbody tr:hover td {
+        background: var(--green-pale);
+    }
+
+    .table td:first-child {
+        font-weight: 500;
+    }
+
+    .table img {
+        width: 52px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border);
+        display: block;
+    }
+
+    /* ---------- Table Action Links ---------- */
+    .table td:last-child {
+        white-space: nowrap;
+    }
+
+    .table td a {
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--green-light);
+        padding: 3px 7px;
+        border-radius: var(--radius-sm);
+        transition: background var(--ease), color var(--ease);
+    }
+
+        .table td a:hover {
+            background: var(--green-pale);
+            color: var(--green);
+        }
+
+        /* Delete link */
+        .table td a[href*="Delete"],
+        .table td a.action-delete {
+            color: #8B3520;
+        }
+
+            .table td a[href*="Delete"]:hover,
+            .table td a.action-delete:hover {
+                background: #FAF0EE;
+                color: #6B2515;
+            }
+
+    /* separator between action links */
+    .table td .link-sep {
+        color: var(--border-dark);
+        margin: 0 1px;
+        font-size: 10px;
+        user-select: none;
+    }
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+    .recipe-page {
+        padding: 18px 16px;
+    }
+
+    .recipe-list {
+        grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+        gap: 12px;
+    }
+
+    .recipe-page-header h1 {
+        font-size: 22px;
+    }
+
+    .table-wrap {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 680px;
+    }
+}

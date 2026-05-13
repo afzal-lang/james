@@ -1,0 +1,231 @@
+/* /Views/Shared/admin_layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-m7q9n0k8j7] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-m7q9n0k8j7] {
+  color: #0077cc;
+}
+
+.btn-primary[b-m7q9n0k8j7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-m7q9n0k8j7], .nav-pills .show > .nav-link[b-m7q9n0k8j7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-m7q9n0k8j7] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-m7q9n0k8j7] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-m7q9n0k8j7] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-m7q9n0k8j7] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-m7q9n0k8j7] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* /Views/Shared/admin_nav.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-cnsj4f96h0] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-cnsj4f96h0] {
+  color: #0077cc;
+}
+
+.btn-primary[b-cnsj4f96h0] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-cnsj4f96h0], .nav-pills .show > .nav-link[b-cnsj4f96h0] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-cnsj4f96h0] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-cnsj4f96h0] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-cnsj4f96h0] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-cnsj4f96h0] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-cnsj4f96h0] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* /Views/Shared/footer.cshtml.rz.scp.css */
+
+/* General footer styling */
+.ftco-footer[b-r9wcepbuc6] {
+    padding: 60px 0;
+    background-color: #222222;
+    color: #fff;
+}
+
+.ftco-footer-widget[b-r9wcepbuc6] {
+    margin-bottom: 30px;
+}
+
+    .ftco-footer-widget h2[b-r9wcepbuc6] {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .ftco-footer-widget ul li[b-r9wcepbuc6] {
+        font-size: 16px;
+        color: #888;
+    }
+
+        .ftco-footer-widget ul li a[b-r9wcepbuc6] {
+            color: #fff;
+        }
+
+            .ftco-footer-widget ul li a:hover[b-r9wcepbuc6] {
+                color: #F96D00;
+            }
+
+.ftco-footer-social i[b-r9wcepbuc6] {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+    transition: color 0.3s;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #333;
+}
+
+    .ftco-footer-social i:hover[b-r9wcepbuc6] {
+        color: #F96D00;
+        background-color: #fff;
+    }
+
+.open-hours[b-r9wcepbuc6] {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .open-hours li[b-r9wcepbuc6] {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.ftco-footer-widget .thumb-menu[b-r9wcepbuc6] {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.subscribe-form input[type="email"][b-r9wcepbuc6] {
+    width: 100%;
+}
+
+.subscribe-form input[type="submit"][b-r9wcepbuc6] {
+    width: 100%;
+    background-color: #F96D00;
+    color: white;
+    font-size: 16px;
+}
+
+    .subscribe-form input[type="submit"]:hover[b-r9wcepbuc6] {
+        background-color: #F96D00;
+    }
+
+
+/* /Views/Shared/user_layout.cshtml.rz.scp.css */
+/* /Views/Shared/user_nav.cshtml.rz.scp.css */
+/* Navbar Styling */
+#ftco-navbar[b-s1n9yxeb48] {
+    background: #222 !important;
+    padding: 12px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+    #ftco-navbar .navbar-brand[b-s1n9yxeb48] {
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff !important;
+    }
+
+    #ftco-navbar .nav-link[b-s1n9yxeb48] {
+        color: #ddd !important;
+        font-size: 14px;
+        margin-right: 10px;
+        transition: 0.3s;
+    }
+
+        #ftco-navbar .nav-link:hover[b-s1n9yxeb48] {
+            color: #F96D00 !important;
+        }
+
+    #ftco-navbar .dropdown-menu[b-s1n9yxeb48] {
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    #ftco-navbar .dropdown-item[b-s1n9yxeb48] {
+        font-size: 14px;
+    }
+
+        #ftco-navbar .dropdown-item:hover[b-s1n9yxeb48] {
+            background: #f3f4f6;
+        }
+
+    /* Icons spacing */
+    #ftco-navbar i[b-s1n9yxeb48] {
+        margin-right: 5px;
+    }
+
+/* Mobile fix */
+.navbar-toggler[b-s1n9yxeb48] {
+    border: none;
+    color: white;
+}
+/* /Views/Shared/_AuthLayout.cshtml.rz.scp.css */

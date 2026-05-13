@@ -1,0 +1,82 @@
+﻿
+/* General footer styling */
+.ftco-footer {
+    padding: 60px 0;
+    background-color: #222222;
+    color: #fff;
+}
+
+.ftco-footer-widget {
+    margin-bottom: 30px;
+}
+
+    .ftco-footer-widget h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .ftco-footer-widget ul li {
+        font-size: 16px;
+        color: #888;
+    }
+
+        .ftco-footer-widget ul li a {
+            color: #fff;
+        }
+
+            .ftco-footer-widget ul li a:hover {
+                color: #F96D00;
+            }
+
+.ftco-footer-social i {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+    transition: color 0.3s;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #333;
+}
+
+    .ftco-footer-social i:hover {
+        color: #F96D00;
+        background-color: #fff;
+    }
+
+.open-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .open-hours li {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.ftco-footer-widget .thumb-menu {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.subscribe-form input[type="email"] {
+    width: 100%;
+}
+
+.subscribe-form input[type="submit"] {
+    width: 100%;
+    background-color: #F96D00;
+    color: white;
+    font-size: 16px;
+}
+
+    .subscribe-form input[type="submit"]:hover {
+        background-color: #F96D00;
+    }
+
+

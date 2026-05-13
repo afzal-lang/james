@@ -1,0 +1,90 @@
+﻿@model IEnumerable<WebApplication1.Models.Announcement>
+
+@{
+    ViewData["Title"] = "Announcements ";
+    // Agar user side ka alag layout hai toh yahan specify karein
+    Layout = "~/Views/Shared/user_layout.cshtml";
+   
+}
+
+<style>
+    .user-page {
+        padding: 40px 0;
+        background: #fdfdfd;
+    }
+
+    .announcement-card {
+        border: none;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: 0.3s;
+        margin-bottom: 25px;
+        border-left: 5px solid #667eea; /* Side accent color */
+    }
+
+        .announcement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+    .post-date {
+        font-size: 0.8rem;
+        color: #999;
+        font-weight: 500;
+    }
+
+    .announcement-title {
+        color: #2d3748;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .contest-tag {
+        font-size: 0.7rem;
+        background: #eef2ff;
+        color: #4338ca;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+</style>
+
+<div class="container user-page">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">📢 Latest Announcements</h2>
+        <p class="text-muted">Stay updated with the latest news and contests.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            @if (!Model.Any())
+            {
+                <div class="text-center p-5 card shadow-sm">
+                    <p class="text-muted">Abhi koi nayi announcement nahi hai.</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <div class="card announcement-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="post-date">
+                                    <i class="far fa-calendar-alt me-1"></i> @item.PostDate?.ToString("dd MMM, yyyy")
+                                </span>
+                                @if (item.Contest != null)
+                                {
+                                    <span class="contest-tag">@item.Contest.Title</span>
+                                }
+                            </div>
+                            <h4 class="announcement-title">@item.Title</h4>
+                            <p class="text-secondary mb-0">@item.Description</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
