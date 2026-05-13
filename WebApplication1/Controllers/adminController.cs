@@ -10,7 +10,12 @@ namespace WebApplication1.Controllers
 {
     public class adminController : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
+
+        public adminController(JamesthewContext context)
+        {
+            db = context;
+        }
 
         public IActionResult Index()
         {

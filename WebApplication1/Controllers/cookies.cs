@@ -9,7 +9,12 @@ namespace WebApplication1.Controllers
 {
     public class cookies : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
+
+        public cookies(JamesthewContext context)
+        {
+            db = context;
+        }
 
         // ===================== LOGIN =====================
 

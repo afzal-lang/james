@@ -8,7 +8,12 @@ namespace WebApplication1.Controllers
     [Authorize(AuthenticationSchemes = "MyCookieAuth")]
     public class SubscriptionController : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
+
+        public SubscriptionController(JamesthewContext context)
+        {
+            db = context;
+        }
 
         // ─── Step 1: Plans Page ───────────────────────────────────
         [HttpGet]

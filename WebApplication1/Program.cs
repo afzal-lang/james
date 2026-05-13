@@ -7,15 +7,41 @@ var builder = WebApplication.CreateBuilder(args);
 // MVC
 // ======================
 builder.Services.AddControllersWithViews();
+var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+
+
+string connectionString;
+
+if (!string.IsNullOrEmpty(databaseUrl))
+{
+    var uri = new Uri(databaseUrl);
+    var userInfo = uri.UserInfo.Split(':');
+
+    connectionString =
+        $"Host={uri.Host};" +
+        $"Port={uri.Port};" +
+        $"Database={uri.AbsolutePath.TrimStart('/')};" +
+        $"Username={userInfo[0]};" +
+        $"Password={userInfo[1]};" +
+        $"SSL Mode=Require;Trust Server Certificate=true;";
+}
+else
+{
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+}
 
 // ======================
 // DATABASE
 // ======================
+
+
+
 builder.Services.AddDbContext<JamesthewContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")
-    )
-);
+    options.UseNpgsql(connectionString)
+           .UseSnakeCaseNamingConvention());
+
+
+
 
 // ======================
 // HTTP CONTEXT
@@ -87,5 +113,12 @@ app.MapControllerRoute(
     pattern: "Contest/{action=Index}/{id?}",
     defaults: new { controller = "Contest" }
 );
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<JamesthewContext>();
+    db.Database.Migrate();
+}
 
 app.Run();

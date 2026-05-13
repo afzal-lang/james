@@ -10,7 +10,12 @@ namespace WebApplication1.Controllers
 
     {
 
-        JamesthewContext _db = new JamesthewContext();
+        private readonly JamesthewContext _db;
+
+        public userController(JamesthewContext context)
+        {
+            _db = context;
+        }
 
 
 

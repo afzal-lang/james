@@ -4,7 +4,12 @@ using WebApplication1.Models;
 
 public class SavedController : Controller
 {
-    JamesthewContext _db = new JamesthewContext();
+    private readonly JamesthewContext _db;
+
+    public SavedController(JamesthewContext context)
+    {
+        _db = context;
+    }
 
     public IActionResult ToggleSaved(int recipeId)
     {

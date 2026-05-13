@@ -6,9 +6,7 @@ namespace WebApplication1.Models;
 
 public partial class JamesthewContext : DbContext
 {
-    public JamesthewContext()
-    {
-    }
+   
 
     public JamesthewContext(DbContextOptions<JamesthewContext> options)
         : base(options)
@@ -29,8 +27,8 @@ public partial class JamesthewContext : DbContext
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Subscription> Subscriptions { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("data source=.;initial catalog=jamesthew;user id=sa;password=aptech; TrustServerCertificate=True");
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //    => optionsBuilder.UseSqlServer("data source=.;initial catalog=jamesthew;user id=sa;password=aptech; TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

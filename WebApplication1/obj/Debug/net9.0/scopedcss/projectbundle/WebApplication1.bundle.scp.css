@@ -1,4 +1,4 @@
-/* /Views/Shared/admin_layout.cshtml.rz.scp.css */
+/* _content/WebApplication1/Views/Shared/admin_layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
@@ -47,7 +47,7 @@ button.accept-policy[b-m7q9n0k8j7] {
   white-space: nowrap;
   line-height: 60px;
 }
-/* /Views/Shared/admin_nav.cshtml.rz.scp.css */
+/* _content/WebApplication1/Views/Shared/admin_nav.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
@@ -96,7 +96,7 @@ button.accept-policy[b-cnsj4f96h0] {
   white-space: nowrap;
   line-height: 60px;
 }
-/* /Views/Shared/footer.cshtml.rz.scp.css */
+/* _content/WebApplication1/Views/Shared/footer.cshtml.rz.scp.css */
 
 /* General footer styling */
 .ftco-footer[b-r9wcepbuc6] {
@@ -179,8 +179,8 @@ button.accept-policy[b-cnsj4f96h0] {
     }
 
 
-/* /Views/Shared/user_layout.cshtml.rz.scp.css */
-/* /Views/Shared/user_nav.cshtml.rz.scp.css */
+/* _content/WebApplication1/Views/Shared/user_layout.cshtml.rz.scp.css */
+/* _content/WebApplication1/Views/Shared/user_nav.cshtml.rz.scp.css */
 /* Navbar Styling */
 #ftco-navbar[b-s1n9yxeb48] {
     background: #222 !important;
@@ -228,4 +228,4 @@ button.accept-policy[b-cnsj4f96h0] {
     border: none;
     color: white;
 }
-/* /Views/Shared/_AuthLayout.cshtml.rz.scp.css */
+/* _content/WebApplication1/Views/Shared/_AuthLayout.cshtml.rz.scp.css */

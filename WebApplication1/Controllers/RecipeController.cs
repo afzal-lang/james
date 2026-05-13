@@ -8,10 +8,15 @@ namespace WebApplication1.Controllers
 {
     public class RecipeController : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
 
-    // ===================== LIST PAGE =====================
-    public IActionResult Recipes()
+        public RecipeController(JamesthewContext context)
+        {
+            db = context;
+        }
+
+        // ===================== LIST PAGE =====================
+        public IActionResult Recipes()
         {
             bool isLoggedIn = HttpContext.Session.GetString("UserId") != null;
             ViewBag.IsLoggedIn = isLoggedIn;

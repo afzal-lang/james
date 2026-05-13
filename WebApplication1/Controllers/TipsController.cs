@@ -6,7 +6,12 @@ namespace WebApplication1.Controllers
 {
     public class TipsController : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
+
+        public TipsController(JamesthewContext context)
+        {
+            db = context;
+        }
 
         public IActionResult Tips()
         {

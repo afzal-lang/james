@@ -1,0 +1,330 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\migrations\\20260513100613_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\20260513100613_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\models\\jamesthewcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\jamesthewcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\views\\shared\\admin_nav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\admin_nav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\views\\admin\\deletecategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\admin\\deletecategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\savedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\savedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\tipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\tipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\cookies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\cookies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\contestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\contestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\anouncementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\anouncementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\admincontrollerhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\admincontrollerhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|c:\\users\\afzal\\desktop\\james\\james\\project\\webapplication1\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DD4B9B1A-2BC8-41ED-B7AC-53E35E251331}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20260513100613_Init.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Migrations\\20260513100613_Init.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\20260513100613_Init.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Migrations\\20260513100613_Init.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\20260513100613_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T10:06:14.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "admin_nav.cshtml",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\admin_nav.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\admin_nav.cshtml",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\admin_nav.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\admin_nav.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-13T09:54:08.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Deletecategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\admin\\Deletecategory.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\admin\\Deletecategory.cshtml",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\admin\\Deletecategory.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\admin\\Deletecategory.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-13T09:53:50.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "userController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\userController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\userController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\userController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\userController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:52:49.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipsController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\TipsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\TipsController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\TipsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\TipsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:51:39.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JamesthewContext.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\JamesthewContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\JamesthewContext.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\JamesthewContext.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\JamesthewContext.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T08:59:09.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SubscriptionController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\SubscriptionController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\SubscriptionController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\SubscriptionController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\SubscriptionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:51:14.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwHsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T08:23:56.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SavedController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\SavedController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\SavedController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\SavedController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\SavedController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:50:00.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\RecipeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:49:44.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\FeedbackController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\FeedbackController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:49:41.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FAQController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\FAQController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\FAQController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\FAQController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\FAQController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:49:26.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "cookies.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\cookies.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\cookies.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\cookies.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\cookies.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:49:03.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ContestController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\ContestController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ContestController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\ContestController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ContestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:48:43.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AnouncementController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\AnouncementController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AnouncementController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\AnouncementController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AnouncementController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:48:39.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "adminControllerHelpers.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\adminControllerHelpers.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\adminControllerHelpers.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\adminControllerHelpers.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\adminControllerHelpers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:48:33.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "adminController.cs",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\adminController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\adminController.cs",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\adminController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\adminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:44:17.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\afzal\\Desktop\\JAMES\\JAMES\\Project\\WebApplication1\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-13T08:20:14.499Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

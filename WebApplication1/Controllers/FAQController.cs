@@ -6,7 +6,12 @@ namespace WebApplication1.Controllers
 {
     public class FAQController : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
+
+        public FAQController(JamesthewContext context)
+        {
+            db = context;
+        }
 
         public IActionResult Faqs()
         {

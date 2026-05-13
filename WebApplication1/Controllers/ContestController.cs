@@ -6,7 +6,12 @@ namespace WebApplication1.Controllers
 {
     public class ContestController : Controller
     {
-        JamesthewContext db = new JamesthewContext();
+        private readonly JamesthewContext db;
+
+        public ContestController(JamesthewContext context)
+        {
+            db = context;
+        }
 
         // ================= INDEX =================
         public IActionResult Index()
